@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KF2QCR2J');</script>
-<!-- End Google Tag Manager -->
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLD56Z8ZR7"></script>
 <script>
@@ -1160,10 +1155,6 @@ h1.hero-h{animation:heroFadeUp .9s ease both;animation-delay:.1s}
 .cib-icon{font-size:17.5px;color:#406AAF;margin-top:2px;flex-shrink:0}
 .cib-text{font-size:14.5px;color:#2a4a3f;line-height:1.65;font-weight:400}
 .cib-text a{color:#2b6a52;font-weight:600}
-.cta-left-leads{display:flex;flex-direction:column;gap:12px;margin-top:18px}
-.cta-left-leads .lead-cta-sub{width:100%;background:rgba(255,255,255,.82);box-shadow:0 6px 18px rgba(30,70,120,.06)}
-.cta-left-leads .lead-cta-sub strong{font-size:15px}
-.cta-left-leads .lead-cta-sub small{font-size:11.5px}
 
 .portal-links{
   display:grid;grid-template-columns:1fr 1fr;gap:20px;
@@ -1501,10 +1492,6 @@ footer{
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF2QCR2J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 
 <!-- NAV -->
 <div class="nav">
@@ -2725,74 +2712,159 @@ function switchTab(index) {
 
     </div><!-- /svc-card-grid -->
     <div class="svc-dots" id="svcDots"></div>
-    <!-- サービス概要 配下：温度感別CTA -->
-    <div class="lead-cta-stack reveal" data-cta-section="service">
-      <a href="booking.html" class="lead-cta-main" data-ga-event="click_service_consult">
-        <span class="lead-cta-icon">▣</span>
-        <span><strong>無料相談を予約する</strong><small>オンラインで30分・無料</small></span>
-        <span class="lead-cta-arrow">→</span>
+
+    <div class="cta-tile-wide reveal">
+      <a href="booking.html" class="cta-tile-wide-inner" data-ga-event="click_service_consult">
+        <span class="cta-tile-wide-dots"></span>
+        <span class="cta-tile-wide-shine"></span>
+        <span class="cta-tile-wide-frame"></span>
+        <span class="cta-tile-wide-corner tl"></span>
+        <span class="cta-tile-wide-corner br"></span>
+        <span class="cta-tile-wide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <span class="cta-tile-wide-divider"></span>
+        <span class="cta-tile-wide-text">
+          <span class="cta-tile-wide-title">自社に必要な対応を相談する</span>
+          <span class="cta-tile-wide-sub">FDA対応から輸出・販路支援まで、まずは無料でご相談ください</span>
+          <span class="cta-tile-wide-tags">
+            <span class="cta-tile-wide-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>相談完全無料</span>
+            <span class="cta-tile-wide-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1分で申し込み</span>
+          </span>
+        </span>
+        <span class="cta-tile-wide-arrow">→</span>
       </a>
-      <p class="lead-cta-separator">まだ相談するほどではない方はこちら</p>
-      <div class="lead-cta-subgrid">
-        <button type="button" class="lead-cta-sub document js-lead-open" data-lead-type="document" data-lead-source="service" data-ga-event="click_service_material">
-          <span class="lead-cta-icon">▤</span><span><strong>サービス資料を受け取る</strong><small>料金・支援内容・導入の流れなど</small></span><span class="lead-cta-arrow">→</span>
-        </button>
-        <button type="button" class="lead-cta-sub inquiry js-lead-open" data-lead-type="inquiry" data-lead-source="service" data-ga-event="click_service_inquiry">
-          <span class="lead-cta-icon">✉</span><span><strong>気になる点を問い合わせる</strong><small>1点からでもお気軽に</small></span><span class="lead-cta-arrow">→</span>
-        </button>
+    </div>
+
+    <!-- FDA顧問プラン -->
+    <div id="advisor-plan" class="adv-plan-wrap reveal" style="margin-top:64px;">
+  <div class="adv-plan-header">
+        <div class="ch-label" style="justify-content:flex-start;margin-bottom:14px;">ADVISORY PLAN</div>
+        <h3 class="display">FDA<em>顧問プラン</em></h3>
+        <p class="adv-plan-catch">FDA対応は、取得して<em>終わりではありません</em></p>
+        <div class="adv-plan-desc">
+          <div class="adv-plan-points">
+            <div class="adv-plan-point-item">
+              <span class="adv-pp-icon">📋</span>
+              <span>施設登録の更新・Prior Notice・規制変更対応など、輸出継続には<strong>定期的な管理が不可欠</strong>です</span>
+            </div>
+            <div class="adv-plan-point-item">
+              <span class="adv-pp-icon">⚠️</span>
+              <span>書類不備による貨物保留（Hold）やFDA指摘への対応遅れが、<strong>販売活動に直接影響</strong>するケースも</span>
+            </div>
+          </div>
+          <p style="font-size:15px;color:var(--ink2);line-height:1.9;margin-top:16px;">取得後も安心してアメリカ市場で販売を続けたい——<br>そんな企業様のために<strong style="color:var(--navy);">ワールドシフトがFDAの顧問となる</strong>プランです。</p>
+        </div>
+      </div>
+
+      <!-- プラン比較表 -->
+      <div class="adv-plan-table-wrap">
+        <table class="adv-plan-table">
+          <thead>
+            <tr>
+              <th class="adv-th-item">項目</th>
+              <th class="adv-th-lite">
+                <div class="adv-plan-badge-slot"></div>
+                <div class="adv-plan-name">ライト</div>
+                <div class="adv-plan-recommend" data-tooltip="最低限の安心を確保したい、施設登録を行わない化粧品企業様">
+                  <span class="adv-plan-recommend-label">こんな企業様へ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+                </div>
+              </th>
+              <th class="adv-th-std">
+                <div class="adv-plan-badge-slot"><div class="adv-plan-badge">一番人気</div></div>
+                <div class="adv-plan-name">スタンダード</div>
+                <div class="adv-plan-recommend" data-tooltip="最低限の安全性に加え、ビジネス運営を支える項目も網羅したい企業様">
+                  <span class="adv-plan-recommend-label">こんな企業様へ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+                </div>
+              </th>
+              <th class="adv-th-pre">
+                <div class="adv-plan-badge-slot"></div>
+                <div class="adv-plan-name">プレミアム</div>
+                <div class="adv-plan-recommend" data-tooltip="安心とビジネスの両面を万全に確保し、FDA対応および海外ビジネス全般において盤石な体制を整えたい企業様">
+                  <span class="adv-plan-recommend-label">こんな企業様へ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">施設登録更新管理</span><span class="adv-item-desc">登録情報変更対応・更新管理を一括サポート。登録情報変更料50%OFF・変更漏れ防止サポート</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">施設更新日管理・リマインド</span><span class="adv-item-desc">更新期限を一元管理。更新月1か月前に事前通知・スケジュール管理</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">緊急対応サポート</span><span class="adv-item-desc">FDA差し止め・通関トラブル対応。Warning Letter対応・通関停止時の対応支援・対応方針ご提案</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">FDA情報提供</span><span class="adv-item-desc">規制変更・最新動向を実務に絞ってタイムリーに提供。Warning Letter事例・指摘傾向・表示変更など</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">施設更新費割引</span><span class="adv-item-desc">施設登録更新料を通常より10%OFFでご提供</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">スポット依頼割引</span><span class="adv-item-desc">各種スポット依頼に15%割引を適用</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">簡易相談（メール）</span><span class="adv-item-desc">軽微な確認事項へのメール優先対応。対応要否確認・基本的な質問など</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">FDAのみ</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">FDAのみ</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">相談範囲無制限</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">無料オンライン相談</span><span class="adv-item-desc">1時間のオンライン相談。FDA対応の課題整理・状況確認・改善検討など</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">月1回</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">無制限</span></td>
+            </tr>
+            <tr>
+              <td class="adv-td-item"><span class="adv-item-name">Prior Notice（事前申告）</span><span class="adv-item-desc">食品出荷時のPrior Notice申告を規定回数までサポート。超過分はスポット扱い</span></td>
+              <td class="adv-td-check"></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">月1回</span></td>
+              <td class="adv-td-check adv-check-yes"><span class="adv-chk">✓</span><span class="adv-chk-note">無制限</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-<!-- FDA顧問プラン -->
-    <section id="advisor-plan" class="advisor-v2 reveal">
-      <div class="advisor-v2-head">
-        <div class="ch-label">FDA ADVISORY PLAN</div>
-        <h3>FDA顧問プラン</h3>
-        <p class="advisor-v2-lead">継続的なサポートで、アメリカ市場でのビジネスをより安心・スムーズに。</p>
-        <p class="advisor-v2-desc">FDA対応は、規制の更新や運用ルールの変更など、継続的な情報収集と対応が求められます。<br>当社の顧問プランでは、貴社のビジネスに合わせて、専門家が継続的にサポートいたします。</p>
-      </div>
-      <div class="advisor-v2-grid">
-        <article class="advisor-v2-card">
-          <div class="advisor-v2-card-title"><span class="advisor-v2-symbol">▧</span><div><strong>ライトプラン</strong><small>必要なサポートを厳選して</small></div></div>
-          <div class="advisor-v2-price">月額 <strong>10,000</strong>円 <small>（税別）</small></div>
-          <ul><li>規制に関する基本的なご相談</li><li>最新情報のご提供</li><li>メールでの質疑対応</li></ul>
-          <p class="advisor-v2-for">まずは最低限のサポートから始めたい企業様におすすめ</p>
-        </article>
-        <article class="advisor-v2-card recommended">
-          <div class="advisor-v2-badge">おすすめ</div>
-          <div class="advisor-v2-card-title"><span class="advisor-v2-symbol">♙</span><div><strong>スタンダードプラン</strong><small>実務から継続的にサポート</small></div></div>
-          <div class="advisor-v2-price">月額 <strong>30,000</strong>円 <small>（税別）</small></div>
-          <ul><li>規制・表示に関するご相談</li><li>ラベル・資料の簡易チェック</li><li>最新情報のご提供</li><li>メール・オンラインでの質疑対応</li></ul>
-          <p class="advisor-v2-for">はじめてのFDA対応や、継続的な支援を受けたい企業様におすすめ</p>
-        </article>
-        <article class="advisor-v2-card premium">
-          <div class="advisor-v2-card-title"><span class="advisor-v2-symbol">♔</span><div><strong>プレミアムプラン</strong><small>戦略的なFDA対応をフルサポート</small></div></div>
-          <div class="advisor-v2-price">月額 <strong>70,000</strong>円 <small>（税別）</small></div>
-          <ul><li>規制・表示に関するご相談（優先対応）</li><li>資料・ラベルの詳細チェック</li><li>輸出戦略・リスク管理のアドバイス</li><li>最新情報のご提供</li><li>メール・オンラインでの質疑対応</li></ul>
-          <p class="advisor-v2-for">複数商品・本格的な米国展開を検討されている企業様におすすめ</p>
-        </article>
-      </div>
-      <div class="advisor-v2-doc">
-        <p>詳しい対応内容などをまとめて知りたい</p>
-        <button type="button" class="advisor-v2-doc-btn js-lead-open" data-lead-type="document" data-lead-source="advisory-detail" data-ga-event="click_advisory_detail_material">顧問プランの詳細資料を受け取る →</button>
-      </div>
-    </section>
 
+    <div class="cta-tile-wide">
+      <a href="booking.html" class="cta-tile-wide-inner" data-ga-event="click_advisory_plan_consult">
+        <span class="cta-tile-wide-dots"></span>
+        <span class="cta-tile-wide-shine"></span>
+        <span class="cta-tile-wide-frame"></span>
+        <span class="cta-tile-wide-corner tl"></span>
+        <span class="cta-tile-wide-corner br"></span>
+        <span class="cta-tile-wide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <span class="cta-tile-wide-divider"></span>
+        <span class="cta-tile-wide-text">
+          <span class="cta-tile-wide-title">FDA顧問プランについて相談する</span>
+          <span class="cta-tile-wide-sub">登録後も続く更新・規制変更に、継続的に伴走します</span>
+          <span class="cta-tile-wide-tags">
+            <span class="cta-tile-wide-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>様々なリスクを未然に回避</span>
+            <span class="cta-tile-wide-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>緊急時サポート付き</span>
+          </span>
+        </span>
+        <span class="cta-tile-wide-arrow">→</span>
+      </a>
+    </div>
 
-<style>
-/* ===== 2026-09 CTA / 顧問プラン / リードフォーム追加 ===== */
-.lead-cta-stack{max-width:980px;margin:38px auto 0;padding:26px;border-radius:18px;background:linear-gradient(135deg,#f4f9ff,#fff);border:1px solid #dbe8f7;box-shadow:0 10px 30px rgba(30,70,120,.07)}
-.lead-cta-main,.lead-cta-sub{font:inherit;text-align:left;border:0;cursor:pointer;text-decoration:none;box-sizing:border-box}
-.lead-cta-main{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;max-width:760px;margin:0 auto;padding:18px 24px;border-radius:12px;background:linear-gradient(135deg,#ff7a00,#ff5b00);color:#fff;box-shadow:0 8px 20px rgba(255,98,0,.22)}
-.lead-cta-main strong,.lead-cta-sub strong{display:block;font-size:17px;line-height:1.5}.lead-cta-main small,.lead-cta-sub small{display:block;margin-top:2px;font-size:12.5px;opacity:.9}.lead-cta-icon{font-size:24px;line-height:1}.lead-cta-arrow{font-size:22px}.lead-cta-separator{text-align:center;font-weight:700;font-size:13px;color:var(--ink2);margin:20px 0 14px}.lead-cta-subgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.lead-cta-sub{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;padding:16px 18px;border-radius:12px;background:#fff}.lead-cta-sub.document{border:1.5px solid #69b99e;color:#166b58}.lead-cta-sub.inquiry{border:1.5px solid #75a7e6;color:#245c9f}.lead-cta-sub:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(30,70,120,.08)}
-.advisor-v2{position:relative;overflow:hidden;margin-top:64px;padding:52px 36px 34px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:linear-gradient(145deg,#081b33 0%,#12365e 58%,#1b4b7d 100%);box-shadow:0 24px 60px rgba(8,27,51,.24)}
-.advisor-v2::before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;right:-150px;top:-170px;background:radial-gradient(circle,rgba(247,221,125,.18),transparent 68%);pointer-events:none}
-.advisor-v2-head{position:relative;z-index:1;text-align:left;margin-bottom:30px}.advisor-v2 .ch-label{color:#F7DD7D}.advisor-v2-head h3{font-family:'Noto Serif JP',serif;font-size:clamp(32px,4vw,50px);color:#fff;margin:4px 0 10px}.advisor-v2-lead{font-size:16px;color:#F7DD7D;font-weight:700;margin-bottom:11px}.advisor-v2-desc{font-size:13px;color:rgba(255,255,255,.74);line-height:1.9}
-.advisor-v2-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.advisor-v2-card{position:relative;display:flex;flex-direction:column;min-height:405px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.20);border-radius:16px;padding:24px 20px 18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);transition:transform .2s,border-color .2s,box-shadow .2s}.advisor-v2-card:hover{transform:translateY(-4px);border-color:rgba(247,221,125,.52);box-shadow:0 16px 34px rgba(0,0,0,.18)}.advisor-v2-card.recommended{border:1.5px solid #F7DD7D;background:linear-gradient(180deg,rgba(247,221,125,.13),rgba(255,255,255,.07));box-shadow:0 14px 36px rgba(0,0,0,.20)}.advisor-v2-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7DD7D,#D7A932);color:#12294f;border-radius:999px;padding:5px 16px;font-size:11px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.18)}
-.advisor-v2-card-title{display:flex;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:15px}.advisor-v2-card-title strong{display:block;font-size:15px;color:#fff}.advisor-v2-card-title small{display:block;margin-top:4px;font-size:10.5px;color:rgba(255,255,255,.56)}.advisor-v2-symbol{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:rgba(247,221,125,.13);border:1px solid rgba(247,221,125,.30);color:#F7DD7D}.advisor-v2-price{padding:20px 0 15px;font-size:12px;color:rgba(255,255,255,.72)}.advisor-v2-price strong{font-family:'Cormorant Garamond',serif;font-size:34px;color:#fff}.advisor-v2-price small{font-size:10px;color:rgba(255,255,255,.55)}.advisor-v2-card ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}.advisor-v2-card li{font-size:11.7px;color:rgba(255,255,255,.86);line-height:1.6;padding-left:19px;position:relative}.advisor-v2-card li:before{content:'✓';position:absolute;left:0;color:#F7DD7D;font-weight:800}.advisor-v2-for{margin-top:auto;padding:14px 13px;border-radius:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.09);font-size:10.5px;color:rgba(255,255,255,.70);line-height:1.65}.advisor-v2-card.recommended .advisor-v2-for{background:rgba(247,221,125,.12);border-color:rgba(247,221,125,.18);color:#fff3c5}
-.advisor-v2-doc{position:relative;z-index:1;margin-top:26px;padding:25px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);text-align:center}.advisor-v2-doc p{font-size:12px;color:rgba(255,255,255,.70);margin-bottom:9px}.advisor-v2-doc-btn{border:0;border-radius:10px;background:linear-gradient(135deg,#ff8a18,#ff5b00);color:#fff;padding:15px 34px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 9px 22px rgba(255,91,0,.24)}
-.lead-modal{position:fixed;inset:0;z-index:12000;background:rgba(9,23,43,.58);display:none;align-items:center;justify-content:center;padding:20px}.lead-modal.show{display:flex}.lead-modal-card{width:min(620px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.28);padding:28px}.lead-modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:20px}.lead-modal-head h3{font-size:21px;color:#16365d;margin:0}.lead-modal-head p{font-size:12.5px;color:var(--ink2);margin-top:5px}.lead-modal-close{border:0;background:#f1f5f9;width:34px;height:34px;border-radius:50%;font-size:22px;cursor:pointer}.lead-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.lead-field{display:flex;flex-direction:column;gap:6px}.lead-field.full{grid-column:1/-1}.lead-field label{font-size:12.5px;font-weight:700;color:#354a61}.lead-field input,.lead-field select,.lead-field textarea{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:11px 12px;font:inherit;font-size:13px;background:#fff}.lead-field textarea{min-height:110px;resize:vertical}.lead-required{color:#d14343}.lead-privacy{margin:16px 0 12px;font-size:11.5px;color:var(--ink2)}.lead-submit{width:100%;border:0;border-radius:10px;background:#1c4f87;color:#fff;padding:14px;font-size:14px;font-weight:700;cursor:pointer}.lead-submit:disabled{opacity:.55;cursor:not-allowed}.lead-status{margin-top:10px;font-size:12px}.lead-status.err{color:#b42318}.lead-status.ok{color:#067647}
-@media(max-width:760px){.lead-cta-stack{padding:18px 14px}.lead-cta-main{padding:16px 14px}.lead-cta-subgrid,.advisor-v2-grid,.lead-form-grid{grid-template-columns:1fr}.advisor-v2{padding:34px 16px 24px}.advisor-v2-card{min-height:0}.lead-field.full{grid-column:auto}}
-</style>
 <style>
 /* ─── FDA顧問プラン ─── */
 .adv-plan-wrap{
@@ -3100,7 +3172,7 @@ function switchTab(index) {
       <div class="flow-step reveal d2">
         <div class="flow-dot">03</div>
         <div class="flow-content">
-          <div class="flow-bg" style="background-image:url('photo-risk-contract.jpg');"></div>
+          <div class="flow-bg" style="background-image:url('photo-flow-planning.jpg');"></div>
           <div class="flow-title">プランのご提案</div>
           <p class="flow-desc">調査結果をもとに、必要な対応事項や全体スケジュールを整理し、お客様の販売形態や事業展開に合わせた最適なプランをご提案いたします。</p>
         </div>
@@ -3206,18 +3278,6 @@ function switchTab(index) {
           <div class="cib-text">通常2営業日以内にご返信します</div>
         </div>
       </div>
-      <div class="cta-left-leads">
-        <button type="button" class="lead-cta-sub document js-lead-open" data-lead-type="document" data-lead-source="bottom" data-ga-event="click_bottom_material">
-          <span class="lead-cta-icon">▤</span>
-          <span><strong>サービス資料を受け取る</strong><small>料金・支援内容・導入の流れなど</small></span>
-          <span class="lead-cta-arrow">→</span>
-        </button>
-        <button type="button" class="lead-cta-sub inquiry js-lead-open" data-lead-type="inquiry" data-lead-source="bottom" data-ga-event="click_bottom_inquiry">
-          <span class="lead-cta-icon">✉</span>
-          <span><strong>気になる点を問い合わせる</strong><small>1点からでもお気軽に</small></span>
-          <span class="lead-cta-arrow">→</span>
-        </button>
-      </div>
     </div>
 
     <div class="ctac-card reveal d1">
@@ -3252,6 +3312,9 @@ function switchTab(index) {
           <div class="selected-summary" id="ctacSelectedSummary"></div>
 
           <button type="button" class="f-submit" id="ctacNextBtn" style="margin-top:18px;" data-ga-event="click_calendar_customer_info">お客様情報の入力へ進む →</button>
+          <div class="ctac-skip-link-wrap">
+            <button type="button" class="ctac-skip-link" id="ctacSkipCalBtn" data-ga-event="click_calendar_email_consult">まずはメールで確認したい方はこちら →</button>
+          </div>
         </div>
 
         <!-- STEP 2: お客様情報 -->
@@ -3456,10 +3519,10 @@ function switchTab(index) {
 <script>
 (function(){
   /* ═══════════ CH7 埋め込みカレンダー＆フォーム ═══════════ */
-  const ENDPOINT_URL = "/fda/api.php";
+  const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbwau_lwj4MkLXnOggRytybZakDdxMorJh_TYvT0owcW1waKuyxqMet7F1JjLXYsrmy6/exec";
   const CLOSED_WEEKDAYS = [0, 6];
   const BOOKABLE_RANGE_DAYS = 90; // 直近3か月分のみ表示
-  const TIME_SLOTS = ["10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00"];
+  const TIME_SLOTS = ["10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00"];
   const SLOT_DURATION_MIN = 60;
   const BUFFER_AFTER_MIN = 30;
 
@@ -3513,23 +3576,6 @@ function switchTab(index) {
     return monthMap[dateStr] || { allDay: false, ranges: [] };
   }
 
-  // 予約確定直前だけはキャッシュを使わず、最新の空き状況を取得する。
-  async function refreshSelectedSlotBeforeSubmit(dateStr, slotTime){
-    const [y, m] = dateStr.split('-').map(Number);
-    const key = `${y}-${m - 1}`;
-    const url = `${ENDPOINT_URL}?action=busy&year=${y}&month=${m}&_=${Date.now()}`;
-
-    const res = await fetch(url, { cache:'no-store' });
-    const json = await res.json();
-
-    if(!json || json.result !== 'success' || !json.busy){
-      throw new Error('最新の空き状況を取得できませんでした。');
-    }
-
-    busyCache[key] = json.busy;
-    return !isSlotTaken(dateStr, slotTime);
-  }
-
   function timeToMinutes(hhmm){
     const [h, m] = hhmm.split(':').map(Number);
     return h * 60 + m;
@@ -3539,7 +3585,6 @@ function switchTab(index) {
     const info = getBusyInfoForDate(dateStr);
     if(!info) return false; // 未取得の間は空き扱い（取得完了後に再描画される）
     if(info.allDay) return true;
-    if(info.takenSlots && info.takenSlots[slotTime]) return true;
     const slotStart = timeToMinutes(slotTime);
     const slotEnd = slotStart + SLOT_DURATION_MIN;
     return info.ranges.some(r => {
@@ -3653,12 +3698,6 @@ function switchTab(index) {
   if(nextBtn) nextBtn.addEventListener('click', () => { calMonth++; if(calMonth>11){calMonth=0;calYear++;} renderCal(); renderSlots(); });
 
   renderCal(); renderSlots();
-  // 次月分は画面表示後に先読みし、月送り時の待ち時間を短縮する。
-  setTimeout(() => {
-    let ny = calYear, nm = calMonth + 1;
-    if(nm > 11){ nm = 0; ny++; }
-    ensureBusyForMonth(ny, nm);
-  }, 0);
 
   let skipCalendar = false;
 
@@ -3674,6 +3713,14 @@ function switchTab(index) {
   });
   if(backBtn) backBtn.addEventListener('click', () => { slider.classList.remove('step2'); });
 
+  /* 「まずはメールで確認したい方はこちら」— 日時選択を省略してフォームへ */
+  const skipCalBtn = document.getElementById('ctacSkipCalBtn');
+  if(skipCalBtn) skipCalBtn.addEventListener('click', () => {
+    skipCalendar = true;
+    summary2.innerHTML = 'ご希望日時：<b>指定なし（メールでの確認を希望）</b>';
+    summary2.classList.add('show');
+    slider.classList.add('step2');
+  });
 
   /* 製品カテゴリ「その他」入力欄 */
   const catSel = document.getElementById('ctacCategory');
@@ -3694,26 +3741,6 @@ function switchTab(index) {
     });
   }
 
-  /* 流入元情報（予約一覧の流入元記録用） */
-  function getTrafficMeta(){
-    const p = new URLSearchParams(location.search);
-    const utmSource = p.get('utm_source') || '';
-    const utmMedium = p.get('utm_medium') || '';
-    const utmCampaign = p.get('utm_campaign') || '';
-    const utmContent = p.get('utm_content') || '';
-    const utmTerm = p.get('utm_term') || '';
-    const gclid = p.get('gclid') || '';
-    const fbclid = p.get('fbclid') || '';
-    let trafficSource = '';
-    if(utmSource) trafficSource = [utmSource, utmMedium].filter(Boolean).join(' / ');
-    else if(gclid) trafficSource = 'Google広告';
-    else if(fbclid) trafficSource = 'Meta広告';
-    else if(document.referrer){
-      try{ trafficSource = '参照元: ' + new URL(document.referrer).hostname; }catch(_){ trafficSource = '参照元あり'; }
-    } else trafficSource = '直接流入';
-    return { trafficSource, utm_source:utmSource, utm_medium:utmMedium, utm_campaign:utmCampaign, utm_content:utmContent, utm_term:utmTerm, gclid, fbclid };
-  }
-
   /* 送信 */
   const statusBox = document.getElementById('ctacStatus');
   if(submitBtn) submitBtn.addEventListener('click', async () => {
@@ -3729,65 +3756,33 @@ function switchTab(index) {
     if(!skipCalendar && (!selDate || !selTime)){ statusBox.className='f-status err'; statusBox.textContent='日時が選択されていません。日時選択に戻ってください。'; return; }
     if(!company || !name || !email){ statusBox.className='f-status err'; statusBox.textContent='会社名・お名前・メールアドレスは必須です。'; return; }
 
-    const payload = { date:(skipCalendar ? '' : selDate), time:(skipCalendar ? '' : selTime), company, name, email, phone, prefecture, category, message, page:location.href, submittedAt:new Date().toISOString(), ...getTrafficMeta() };
+    const payload = { date:(skipCalendar ? '' : selDate), time:(skipCalendar ? '' : selTime), company, name, email, phone, prefecture, category, message, page:location.href, submittedAt:new Date().toISOString() };
 
     submitBtn.disabled = true;
     const origLabel = submitBtn.textContent;
     submitBtn.textContent = '送信中…';
 
     try{
-      // 日時指定の予約だけ、送信直前に最新の空き状況を再確認する
-      if(!skipCalendar){
-        const stillAvailable = await refreshSelectedSlotBeforeSubmit(selDate, selTime);
-        if(!stillAvailable){
-          selTime = null;
-          slider.classList.remove('step2');
-          renderCal(); renderSlots(); updateSummary();
-          statusBox.className = 'f-status err';
-          statusBox.textContent = '選択した日時は現在予約できません。最新の空き時間から別の枠を選択してください。';
-          submitBtn.textContent = origLabel;
-          return;
-        }
-      }
-
-      const res = await fetch(ENDPOINT_URL, {
-        method:'POST',
+      // no-corsで応答が読めない以上、待っても得られる情報が無いため、
+      // 送信の完了(サーバー処理の完了)は待たずに進める（演出として少しだけ待つ）
+      fetch(ENDPOINT_URL, {
+        method:'POST', mode:'no-cors',
         headers:{'Content-Type':'text/plain;charset=utf-8'},
         body:JSON.stringify(payload)
-      });
-      const json = await res.json();
+      }).catch(err => console.error('送信エラー:', err));
 
-      if(json && json.result === 'conflict'){
-        if(selDate){
-          const [yy, mm] = selDate.split('-').map(Number);
-          delete busyCache[`${yy}-${mm - 1}`];
-          await ensureBusyForMonth(yy, mm - 1);
-        }
-        selTime = null;
-        slider.classList.remove('step2');
-        renderCal(); renderSlots(); updateSummary();
-        statusBox.className = 'f-status err';
-        statusBox.textContent = json.error || 'その枠は埋まりました。最新の空き時間から別の枠を選択してください。';
-        submitBtn.textContent = origLabel;
-        return;
-      }
-      if(!json || json.result !== 'success') throw new Error((json && json.error) || '送信に失敗しました');
+      await new Promise(resolve => setTimeout(resolve, 1300));
 
       statusBox.className = 'f-status';
       statusBox.textContent = '';
       submitBtn.textContent = origLabel;
-      if(selDate){
-        const [yy, mm] = selDate.split('-').map(Number);
-        delete busyCache[`${yy}-${mm - 1}`];
-      }
+
       const modalId = skipCalendar ? 'ctacInquiryModalOverlay' : 'bkModalOverlay';
       const modalOverlay = document.getElementById(modalId);
       if(modalOverlay) modalOverlay.classList.add('show');
     }catch(err){
       statusBox.className = 'f-status err';
-      statusBox.textContent = err && err.message === '最新の空き状況を取得できませんでした。'
-        ? '最新の空き状況を確認できませんでした。ページを再読み込みしてから再度お試しください。'
-        : '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
+      statusBox.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
       submitBtn.textContent = origLabel;
     }finally{
       submitBtn.disabled = !privacyCheckbox.checked;
@@ -3980,7 +3975,7 @@ a.btn-amber:hover{
       <div class="bk-modal-note-title">【ヒアリングシートご記入のお願い】</div>
       <p class="bk-modal-text">
         無料相談をよりスムーズに進めるため、事前にヒアリングシートへのご記入をお願いしております。<br>
-        予約確認メールに記載されているURLから、無料相談日の2日前までに必ずご回答ください。
+        予約確認メールに記載されているURLから、無料相談日の前日までに必ずご回答ください。
       </p>
     </div>
     <button type="button" class="bk-modal-ok" id="bkModalOk">閉じる</button>
@@ -4101,60 +4096,6 @@ initSwipeCarouselDots_('.svc-card-grid', 'svcDots', '.svc-card', 0.84);
   document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
 })();
 </script>
-
-<!-- 資料請求・問い合わせ共通モーダル -->
-<div class="lead-modal" id="leadModal" aria-hidden="true">
-  <div class="lead-modal-card" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
-    <div class="lead-modal-head"><div><h3 id="leadModalTitle">サービス資料を受け取る</h3><p id="leadModalDesc">必要事項をご入力ください。資料はメールでお送りします。</p></div><button type="button" class="lead-modal-close" id="leadModalClose" aria-label="閉じる">×</button></div>
-    <form id="leadForm">
-      <input type="hidden" id="leadType" value="document"><input type="hidden" id="leadSource" value="service">
-      <div class="lead-form-grid">
-        <div class="lead-field"><label>会社名 <span class="lead-required">*</span></label><input id="leadCompany" required></div>
-        <div class="lead-field"><label>担当者名 <span class="lead-required">*</span></label><input id="leadName" required></div>
-        <div class="lead-field full"><label>メールアドレス <span class="lead-required">*</span></label><input id="leadEmail" type="email" required></div>
-        <div class="lead-field"><label>商品カテゴリ <span class="lead-required">*</span></label><select id="leadCategory" required><option value="">選択してください</option><option>食品</option><option>化粧品</option><option>その他</option></select></div>
-        <div class="lead-field" id="leadCategoryOtherWrap" style="display:none"><label>その他の商品カテゴリ <span class="lead-required">*</span></label><input id="leadCategoryOther"></div>
-        <div class="lead-field full"><label>検討状況 <span class="lead-required">*</span></label><select id="leadConsideration" required><option value="">選択してください</option><option>情報収集中</option><option>3か月以内に検討</option><option>すぐに相談したい</option><option>その他</option></select></div>
-        <div class="lead-field full" id="leadMessageWrap" style="display:none"><label>問い合わせ内容 <span class="lead-required">*</span></label><textarea id="leadMessage" placeholder="気になっている点をご記入ください"></textarea></div>
-      </div>
-      <label class="lead-privacy"><input type="checkbox" id="leadPrivacy" required> <a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します。</label>
-      <button type="submit" class="lead-submit" id="leadSubmit">送信する</button><div class="lead-status" id="leadStatus"></div>
-    </form>
-  </div>
-</div>
-<script>
-(function(){
-  // Apps Scriptをウェブアプリとして公開した後、発行URLに差し替えてください。
-  const LEAD_ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbzrzimq10LpLNRJ6LwyUCapNgK9q9OcC_IgM9w2vooGN5fRiUowkM8BZizbVPZR8wHp/exec';
-  const modal=document.getElementById('leadModal'), form=document.getElementById('leadForm'), closeBtn=document.getElementById('leadModalClose');
-  const typeEl=document.getElementById('leadType'), sourceEl=document.getElementById('leadSource'), title=document.getElementById('leadModalTitle'), desc=document.getElementById('leadModalDesc');
-  const category=document.getElementById('leadCategory'), otherWrap=document.getElementById('leadCategoryOtherWrap'), other=document.getElementById('leadCategoryOther');
-  const messageWrap=document.getElementById('leadMessageWrap'), message=document.getElementById('leadMessage'), status=document.getElementById('leadStatus'), submit=document.getElementById('leadSubmit');
-  function openModal(btn){
-    const type=btn.dataset.leadType || 'document', source=btn.dataset.leadSource || 'unknown'; typeEl.value=type; sourceEl.value=source;
-    const inquiry=type==='inquiry';
-    const advisoryDetail=(!inquiry && source==='advisory-detail');
-    title.textContent=inquiry?'気になる点を問い合わせる':(advisoryDetail?'顧問プランの詳細資料を受け取る':'サービス資料を受け取る');
-    desc.textContent=inquiry?'FDA対応について、1点からでもお気軽にお問い合わせください。':(advisoryDetail?'必要事項をご入力ください。顧問プランの詳細資料をメールでお送りします。':'必要事項をご入力ください。資料はメールでお送りします。');
-    messageWrap.style.display=inquiry?'flex':'none'; message.required=inquiry; if(!inquiry) message.value=''; status.textContent=''; status.className='lead-status'; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
-  }
-  function closeModal(){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-  document.querySelectorAll('.js-lead-open').forEach(btn=>btn.addEventListener('click',()=>openModal(btn)));
-  closeBtn.addEventListener('click',closeModal); modal.addEventListener('click',e=>{if(e.target===modal)closeModal()}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('show'))closeModal()});
-  category.addEventListener('change',()=>{const on=category.value==='その他';otherWrap.style.display=on?'flex':'none';other.required=on;if(!on)other.value='';});
-  function utm(){const p=new URLSearchParams(location.search);return {utm_source:p.get('utm_source')||'',utm_medium:p.get('utm_medium')||'',utm_campaign:p.get('utm_campaign')||'',utm_content:p.get('utm_content')||'',utm_term:p.get('utm_term')||''};}
-  form.addEventListener('submit',async function(e){
-    e.preventDefault(); if(!form.reportValidity()) return; if(LEAD_ENDPOINT_URL.includes('PASTE_')){status.className='lead-status err';status.textContent='送信先の設定が未完了です。Apps ScriptのURLを設定してください。';return;}
-    const payload={type:typeEl.value,source:sourceEl.value,company:document.getElementById('leadCompany').value.trim(),name:document.getElementById('leadName').value.trim(),email:document.getElementById('leadEmail').value.trim(),category:category.value==='その他'?other.value.trim():category.value,consideration:document.getElementById('leadConsideration').value,message:message.value.trim(),page:location.href,submittedAt:new Date().toISOString(),...utm()};
-    submit.disabled=true; submit.textContent='送信中…'; status.textContent='';
-    try{await fetch(LEAD_ENDPOINT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)}); await new Promise(r=>setTimeout(r,900));
-      if(typeof gtag==='function'){gtag('event',payload.type==='document'?'submit_material_request':'submit_general_inquiry',{cta_location:payload.source});}
-      status.className='lead-status ok';status.textContent=payload.type==='document'?'送信しました。入力いただいたメールアドレスへ資料をお送りします。':'送信しました。内容を確認のうえ担当者よりご連絡します。'; form.reset(); otherWrap.style.display='none'; messageWrap.style.display='none'; setTimeout(closeModal,1800);
-    }catch(err){status.className='lead-status err';status.textContent='送信に失敗しました。時間をおいて再度お試しください。';}
-    finally{submit.disabled=false;submit.textContent='送信する';}
-  });
-})();
-</script>
 <script>
 // 各ボタンを固有のGA4イベント名で計測する。
 (function(){
@@ -4251,20 +4192,6 @@ document.addEventListener("click",function(e){
     "ソースURL":location.href
   }, open);
 },true);
-</script>
-
-<script>
-/* LPの流入パラメータを booking.html へ引き継ぐ */
-(function(){
-  const src = new URLSearchParams(location.search);
-  const keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'];
-  if(!keys.some(k => src.get(k))) return;
-  document.querySelectorAll('a[href="booking.html"]').forEach(a => {
-    const u = new URL(a.getAttribute('href'), location.href);
-    keys.forEach(k => { const v = src.get(k); if(v) u.searchParams.set(k,v); });
-    a.setAttribute('href', u.pathname.split('/').pop() + u.search);
-  });
-})();
 </script>
 </body>
 </html>
