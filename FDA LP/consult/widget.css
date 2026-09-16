@@ -1,0 +1,191 @@
+/* ポータル相談ウィジェット（顧客フロント）— モーダル内に全幅で収まる前提 */
+.cw {
+  --cw-ink: #15202b;
+  --cw-sub: #5b6b7a;
+  --cw-line: #e3e8ee;
+  --cw-bg: #ffffff;
+  --cw-soft: #f5f8fb;
+  --cw-brand: #0b5cff;
+  --cw-brand-ink: #ffffff;
+  --cw-ok: #1a9e6a;
+  --cw-warn: #b26a00;
+  --cw-danger: #c0392b;
+  font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--cw-ink);
+  background: var(--cw-bg);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  position: relative;   /* 用語ツールチップの基準 */
+}
+.cw * { box-sizing: border-box; }
+
+/* 専門用語ツールチップ */
+.cw-term { border-bottom: 1px dotted var(--cw-brand); cursor: help; }
+.cw-tip {
+  position: absolute; z-index: 60; max-width: 260px;
+  background: #15202b; color: #fff; font-size: 12px; line-height: 1.55;
+  padding: 8px 11px; border-radius: 9px; box-shadow: 0 8px 24px rgba(20,32,43,.28);
+  pointer-events: none;
+}
+
+/* ヘッダ：相談対象の文脈チップ */
+.cw-head { padding: 16px 18px 12px; border-bottom: 1px solid var(--cw-line); }
+.cw-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; color: var(--cw-brand);
+  background: #eaf1ff; border: 1px solid #d4e1ff; border-radius: 999px;
+  padding: 4px 10px; margin-bottom: 8px; max-width: 100%;
+}
+.cw-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cw-brand); }
+.cw-title { font-size: 16px; font-weight: 700; margin: 0; }
+.cw-status { font-size: 12px; margin-top: 4px; display: flex; align-items: center; gap: 6px; color: var(--cw-sub); }
+.cw-status .led { width: 8px; height: 8px; border-radius: 50%; background: #c4ccd4; }
+.cw-status.online .led { background: var(--cw-ok); box-shadow: 0 0 0 3px rgba(26,158,106,.18); }
+
+/* 本体スクロール域 */
+.cw-body { flex: 1; min-height: 0; overflow-y: auto; padding: 14px 16px 18px; background: var(--cw-soft); }
+
+/* 入口カード */
+.cw-cards { display: flex; flex-direction: column; gap: 10px; }
+.cw-card {
+  width: 100%; text-align: left; cursor: pointer;
+  background: var(--cw-bg); border: 1px solid var(--cw-line); border-radius: 12px;
+  padding: 14px 16px; display: flex; align-items: center; gap: 14px;
+  transition: border-color .12s, box-shadow .12s, transform .04s;
+}
+.cw-card:hover { border-color: #c2d2ff; box-shadow: 0 2px 10px rgba(11,92,255,.08); }
+.cw-card:active { transform: translateY(1px); }
+.cw-card[disabled] { opacity: .5; cursor: not-allowed; }
+.cw-card.primary { background: var(--cw-brand); border-color: var(--cw-brand); }
+.cw-card.primary .cw-card-t, .cw-card.primary .cw-card-s { color: var(--cw-brand-ink); }
+.cw-card.primary .cw-ico { background: rgba(255,255,255,.18); }
+.cw-ico {
+  width: 40px; height: 40px; flex: none; border-radius: 10px; background: #eef3fb;
+  display: grid; place-items: center; font-size: 20px;
+}
+.cw-card-main { flex: 1; min-width: 0; }
+.cw-card-t { font-size: 14.5px; font-weight: 700; margin: 0; }
+.cw-card-s { font-size: 12px; color: var(--cw-sub); margin: 2px 0 0; line-height: 1.45; }
+.cw-card-go { font-size: 18px; color: inherit; opacity: .6; }
+
+/* オフライン帯 */
+.cw-banner {
+  background: #fff7ea; border: 1px solid #ffe2b0; color: var(--cw-warn);
+  border-radius: 10px; padding: 10px 12px; font-size: 12.5px; font-weight: 600;
+  margin-bottom: 12px; line-height: 1.5;
+}
+
+/* 画面ヘッダ（戻る＋タイトル・スクロールしても上部に残る） */
+.cw-shead {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 6px;
+  background: var(--cw-bg); padding: 6px 0 10px; margin: -14px -16px 10px; padding-left: 12px; padding-right: 16px;
+  border-bottom: 1px solid var(--cw-line);
+}
+.cw-back {
+  background: none; border: none; color: var(--cw-sub); font-size: 22px; line-height: 1;
+  cursor: pointer; padding: 2px 8px; border-radius: 8px;
+}
+.cw-back:hover { background: var(--cw-soft); color: var(--cw-ink); }
+.cw-shead-t { font-size: 15px; font-weight: 700; }
+.cw-end { margin-left: auto; background: none; border: 1px solid var(--cw-line); color: var(--cw-sub); font-size: 12px; padding: 5px 11px; border-radius: 8px; cursor: pointer; }
+.cw-end:hover { border-color: var(--cw-danger); color: var(--cw-danger); }
+
+/* 用語ヒント */
+.cw-hint { font-size: 11.5px; color: var(--cw-sub); background: var(--cw-soft); border: 1px solid var(--cw-line); border-radius: 9px; padding: 7px 11px; margin-top: 8px; text-align: center; }
+
+/* チャットスレッド */
+.cw-thread { display: flex; flex-direction: column; gap: 8px; padding-bottom: 6px; }
+.cw-msg { max-width: 84%; padding: 9px 12px; border-radius: 14px; font-size: 13.5px; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+.cw-msg.in { align-self: flex-start; background: #fff; border: 1px solid var(--cw-line); border-bottom-left-radius: 4px; }
+.cw-msg.out { align-self: flex-end; background: var(--cw-brand); color: #fff; border-bottom-right-radius: 4px; }
+
+/* AI回答のMarkdown整形（renderRich が付ける .cw-md）。
+   ブロック要素で組み立てるため pre-wrap を解除し、余白は下記で明示的に持たせる。 */
+.cw-md { white-space: normal; }
+.cw-md > *:first-child { margin-top: 0; }
+.cw-md > *:last-child { margin-bottom: 0; }
+.cw-md p { margin: 0 0 8px; }
+.cw-md h4, .cw-md h5, .cw-md h6 { margin: 13px 0 6px; line-height: 1.4; font-weight: 800; color: #241a3d; }
+.cw-md h4 { font-size: 14.5px; }
+.cw-md h5, .cw-md h6 { font-size: 13.5px; }
+.cw-md ul, .cw-md ol { margin: 0 0 8px; padding-left: 1.35em; }
+.cw-md li { margin: 0 0 4px; }
+.cw-md strong { font-weight: 800; color: #241a3d; }
+.cw-md code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; background: rgba(109, 74, 216, .09); border-radius: 4px; padding: 1px 5px; }
+.cw-md blockquote { margin: 8px 0; padding: 8px 11px; background: rgba(109, 74, 216, .07); border-left: 3px solid var(--cw-brand); border-radius: 0 8px 8px 0; }
+.cw-md blockquote > :last-child { margin-bottom: 0; }
+.cw-md hr { margin: 12px 0; border: 0; border-top: 1px solid var(--cw-line); }
+/* 表は吹き出しより広くなりがちなので、吹き出しを壊さず表だけ横スクロールさせる */
+.cw-md-tw { margin: 8px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.cw-md table { border-collapse: collapse; font-size: 12.5px; min-width: 100%; }
+.cw-md th, .cw-md td { border: 1px solid var(--cw-line); padding: 5px 9px; text-align: left; vertical-align: top; white-space: nowrap; }
+.cw-md th { background: rgba(109, 74, 216, .08); font-weight: 800; color: #241a3d; }
+
+.cw-meta { font-size: 10.5px; color: var(--cw-sub); align-self: center; margin: 4px 0; }
+
+/* 入力フォーム類 */
+.cw-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.cw-field label { font-size: 12px; font-weight: 600; color: var(--cw-sub); }
+.cw-input, .cw-area {
+  width: 100%; border: 1px solid var(--cw-line); border-radius: 10px; padding: 10px 12px;
+  font-size: 13.5px; font-family: inherit; color: var(--cw-ink); background: #fff;
+}
+.cw-area { min-height: 92px; resize: vertical; }
+.cw-input:focus, .cw-area:focus { outline: none; border-color: var(--cw-brand); box-shadow: 0 0 0 3px rgba(11,92,255,.12); }
+.cw-note { font-size: 11.5px; color: var(--cw-sub); line-height: 1.5; margin: 0 0 12px; }
+.cw-err { color: var(--cw-danger); font-size: 12px; margin: 0 0 10px; min-height: 14px; }
+
+/* 送信バー（チャット下部固定） */
+.cw-foot { border-top: 1px solid var(--cw-line); background: #fff; padding: 10px 12px; display: flex; gap: 8px; align-items: flex-end; }
+.cw-foot .cw-area { min-height: 38px; max-height: 120px; padding: 9px 12px; }
+.cw-send {
+  flex: none; border: none; background: var(--cw-brand); color: #fff; font-weight: 700;
+  border-radius: 10px; padding: 0 16px; height: 40px; cursor: pointer; font-size: 14px;
+}
+.cw-send:disabled { opacity: .45; cursor: default; }
+
+/* 大ボタン（フォーム送信・チャット開始） */
+.cw-btn {
+  width: 100%; border: none; background: var(--cw-brand); color: #fff; font-weight: 700;
+  border-radius: 11px; padding: 13px; font-size: 14.5px; cursor: pointer;
+}
+.cw-btn:disabled { opacity: .5; cursor: default; }
+.cw-btn.ghost { background: #eef3fb; color: var(--cw-brand); }
+
+/* 完了・状態表示 */
+.cw-done { text-align: center; padding: 22px 8px; }
+.cw-done .ok { font-size: 40px; }
+.cw-done h4 { margin: 8px 0 4px; font-size: 16px; }
+.cw-done p { margin: 0; font-size: 13px; color: var(--cw-sub); line-height: 1.6; }
+.cw-disc { font-size: 11px; color: var(--cw-sub); line-height: 1.5; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--cw-line); }
+.cw-typing { font-size: 12px; color: var(--cw-sub); padding: 4px 2px; }
+
+/* 個別相談CTA（担当者が案内→顧客が本格クロージングへ遷移） */
+.cw-consult { margin: 10px 0 4px; border: 1px solid var(--cw-brand); border-radius: 12px; padding: 12px 14px; background: #eef4ff; }
+.cw-consult-t { font-size: 13.5px; font-weight: 700; color: var(--cw-brand); display: flex; align-items: center; gap: 6px; }
+.cw-consult-t::before { content: "📩"; }
+.cw-consult-s { font-size: 12px; color: var(--cw-sub); margin: 5px 0 10px; line-height: 1.55; }
+.cw-consult-btn { width: 100%; border: none; background: var(--cw-brand); color: #fff; font-weight: 700; border-radius: 10px; padding: 12px; font-size: 14.5px; cursor: pointer; }
+.cw-consult-btn:hover { filter: brightness(1.05); }
+
+/* AIに聞く：人チャット(青)と区別するため紫系の配色＋導入文 */
+.cw.cw-ai-mode { --cw-brand: #6d4ad8; }
+.cw-ai-mode .cw-msg.in { background: #f7f4ff; border-color: #e0d7f7; }
+.cw-ai-mode .cw-consult { background: #f3eefe; border-color: #6d4ad8; }
+.cw-ai-intro { font-size: 12px; color: #5b4a8a; background: #f3eefe; border: 1px solid #e2d8fb; border-radius: 10px; padding: 9px 12px; margin-bottom: 10px; line-height: 1.5; }
+
+/* モバイル最適化（スマホは全画面想定・タッチ余白を広げる） */
+@media (max-width: 480px) {
+  .cw-card { padding: 15px 16px; }
+  .cw-card-t { font-size: 15px; }
+  .cw-msg { font-size: 14.5px; max-width: 88%; }
+  .cw-send { height: 46px; padding: 0 18px; }
+  .cw-foot .cw-area { min-height: 44px; }
+  .cw-consult-btn, .cw-btn { padding: 14px; font-size: 15px; }
+  .cw-tip { max-width: 75vw; }
+}
+.hidden { display: none !important; }

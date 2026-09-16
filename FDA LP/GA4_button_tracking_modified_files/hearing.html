@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLD56Z8ZR7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLD56Z8ZR7');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料相談ヒアリングシート | FDA Compliance Partner</title>
+<meta name="description" content="FDA対応の無料相談をよりスムーズに進めるための事前ヒアリングシートです。所要時間約5分、商品情報や現状のお悩みをご記入いただくだけで、当日の相談内容を充実させられます。">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17.5px}
+:root{
+  --navy:#406AAF; --navy2:#427AB5; --navy3:#6a9fd4;
+  --blue:#427AB5; --blue2:#eef4fc; --blue3:#d0e2f5;
+  --amber:#F7DD7D; --amber2:#FFF8E1;
+  --white:#FFFFFF; --light:#F1F5F9;
+  --ink:#1E293B; --ink2:#475569; --ink3:#94A3B8;
+  --border:#E2E8F0; --border2:#CBD5E1;
+  --green:#059669; --greenl:#ECFDF5; --red:#DC2626;
+  --r:10px; --r2:6px;
+}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#f7fafd;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+@keyframes floatUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-18px,14px) scale(1.06)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── hero ── */
+.hs-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#12294f 0%,#1c3c66 42%,#2f5590 100%);
+  padding:88px 24px 56px;
+}
+.hs-hero::before,.hs-hero::after{
+  content:'';position:absolute;border-radius:50%;filter:blur(50px);pointer-events:none;
+}
+.hs-hero::before{
+  width:300px;height:300px;background:radial-gradient(circle,rgba(247,221,125,.32),transparent 70%);
+  top:-110px;right:-60px;animation:blobFloat 9s ease-in-out infinite;
+}
+.hs-hero::after{
+  width:260px;height:260px;background:radial-gradient(circle,rgba(122,169,224,.38),transparent 70%);
+  bottom:-130px;left:6%;animation:blobFloat 11s ease-in-out infinite reverse;
+}
+.hs-back{
+  position:absolute;top:26px;left:20px;z-index:10;
+  display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#fff;font-weight:600;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:100px;
+  padding:9px 18px 9px 14px;backdrop-filter:blur(6px);transition:all .2s;
+}
+.hs-back svg{width:14px;height:14px;flex-shrink:0;transition:transform .2s;}
+.hs-back:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.45);}
+.hs-back:hover svg{transform:translateX(-3px);}
+.hs-hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;}
+.hs-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--amber);margin:0 0 12px;}
+.hs-eyebrow::before{content:'';width:22px;height:1px;background:currentColor;}
+.hs-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4vw,44px);color:#fff;line-height:1.2;}
+.hs-title em{font-style:italic;color:var(--amber);}
+.hs-sub{font-size:14px;color:rgba(255,255,255,.78);margin-top:14px;line-height:1.85;max-width:600px;}
+.hs-note{
+  display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:12.5px;color:#fff;font-weight:500;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:100px;padding:7px 14px;
+}
+.hs-note svg{width:13px;height:13px;color:var(--amber);flex-shrink:0;}
+
+/* ── layout ── */
+.hs-wrap{max-width:900px;margin:-30px auto 100px;padding:0 24px;position:relative;z-index:3;}
+
+.hs-card{
+  background:#fff;border:1px solid rgba(28,60,102,.08);border-radius:20px;
+  box-shadow:0 20px 48px rgba(20,45,85,.1);
+  padding:34px 36px;margin-bottom:22px;position:relative;overflow:hidden;
+  animation:floatUp .5s ease both;
+}
+.hs-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#F7DD7D,#EEC85A 50%,#F7DD7D);
+}
+@media(max-width:640px){.hs-card{padding:24px 20px;}}
+.hs-card-head{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+.hs-card-num{
+  width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#4a7bc4,#2f5590);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;
+  box-shadow:0 6px 14px rgba(64,106,175,.32);
+}
+.hs-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#1c3c66;}
+
+.hs-q{margin-bottom:24px;}
+.hs-q:last-child{margin-bottom:0;}
+.hs-q-label{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.7;margin-bottom:4px;}
+.hs-q-label .req{color:var(--red);margin-left:2px;}
+.hs-q-hint{font-size:12.5px;color:var(--ink3);line-height:1.6;margin-bottom:10px;}
+
+.hs-input,.hs-textarea,.hs-select{
+  width:100%;padding:12px 14px;border:1.5px solid var(--border2);border-radius:9px;
+  font-size:14px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .2s;
+}
+.hs-input:focus,.hs-textarea:focus,.hs-select:focus{outline:none;border-color:var(--navy);}
+.hs-textarea{resize:vertical;min-height:80px;}
+.hs-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+
+.hs-check-grid,.hs-radio-grid{display:flex;flex-direction:column;gap:9px;}
+.hs-check,.hs-radio{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:11px 14px;border:1.5px solid var(--border2);border-radius:9px;
+  cursor:pointer;transition:all .18s;font-size:13.5px;color:var(--ink);line-height:1.6;
+}
+.hs-check:hover,.hs-radio:hover{border-color:var(--navy3);background:var(--blue2);}
+.hs-check input,.hs-radio input{margin-top:2px;accent-color:var(--navy);flex-shrink:0;width:15px;height:15px;}
+.hs-check:has(input:checked),.hs-radio:has(input:checked){
+  border-color:var(--navy);background:var(--blue2);font-weight:600;
+}
+
+.hs-cond{margin-top:10px;display:none;}
+.hs-cond.show{display:block;}
+
+.hs-sub-block{
+  margin-top:14px;padding:16px 18px;background:#f8fafc;border-radius:10px;
+  border-left:3px solid var(--navy3);display:none;
+}
+.hs-sub-block.show{display:block;}
+
+/* ── アコーディオン ── */
+.hs-accordion{margin-top:14px;border:1.5px solid var(--border2);border-radius:10px;overflow:hidden;}
+.hs-accordion-toggle{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:13px 16px;background:#f8fafc;border:none;cursor:pointer;
+  font-size:13.5px;font-weight:700;color:#1c3c66;font-family:inherit;text-align:left;
+}
+.hs-accordion-arrow{transition:transform .2s;color:var(--ink3);flex-shrink:0;}
+.hs-accordion.open .hs-accordion-arrow{transform:rotate(180deg);}
+.hs-accordion-body{display:none;padding:16px;border-top:1px solid var(--border);}
+.hs-accordion.open .hs-accordion-body{display:block;}
+
+/* ── 施設情報の追加行 ── */
+.hs-facility-row{display:grid;grid-template-columns:1fr 1.4fr auto;gap:8px;margin-bottom:8px;align-items:start;}
+@media(max-width:640px){.hs-facility-row{grid-template-columns:1fr;}}
+.hs-facility-remove{
+  width:38px;height:38px;flex-shrink:0;border-radius:8px;border:1.5px solid var(--border2);
+  background:#fff;color:var(--red);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;
+}
+.hs-add-btn{
+  margin-top:4px;padding:9px 16px;border:1.5px dashed var(--navy3);border-radius:8px;
+  background:var(--blue2);color:var(--navy);font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit;
+}
+.hs-add-btn:hover{background:var(--blue3);}
+
+/* ── ファイル添付 ── */
+.hs-file-wrap{margin-top:10px;}
+.hs-file-label{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 16px;
+  border:1.5px dashed var(--border2);border-radius:8px;cursor:pointer;
+  font-size:12.5px;color:var(--ink2);font-weight:600;background:#fafcff;
+}
+.hs-file-label:hover{border-color:var(--navy3);background:var(--blue2);}
+.hs-file-label input{display:none;}
+.hs-file-hint{font-size:11px;color:var(--ink3);margin-top:6px;}
+.hs-file-list{margin-top:8px;display:flex;flex-direction:column;gap:6px;}
+.hs-file-item{
+  display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2);
+  background:var(--greenl);border:1px solid rgba(5,150,105,.2);border-radius:7px;padding:7px 10px;
+}
+.hs-file-item a{color:var(--green);text-decoration:underline;}
+.hs-file-item a:hover{color:#047857;}
+.hs-file-item.uploading{background:#f8fafc;border-color:var(--border2);color:var(--ink3);}
+.hs-file-item.error{background:#FEF2F2;border-color:rgba(220,38,38,.25);color:#991B1B;}
+.hs-file-item .sp{width:12px;height:12px;border:2px solid rgba(64,106,175,.3);border-top-color:var(--navy);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
+.hs-file-item .rm{margin-left:auto;cursor:pointer;color:var(--ink3);font-weight:700;flex-shrink:0;}
+
+/* ── 商品ブロック ── */
+.hs-product{
+  margin-top:20px;padding:22px 24px;background:#f8fafc;border-radius:14px;
+  border:1px solid var(--border);position:relative;
+}
+@media(max-width:640px){.hs-product{padding:18px 16px;}}
+.hs-product-title{
+  font-size:14px;font-weight:700;color:#1c3c66;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.hs-product-title .badge{
+  width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#4a7bc4,#2f5590);
+  color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.hs-product-row{margin-bottom:14px;}
+.hs-product-row:last-child{margin-bottom:0;}
+
+.hs-support-group-label{font-size:12.5px;font-weight:700;color:var(--navy);margin:16px 0 8px;}
+.hs-support-group-label:first-child{margin-top:0;}
+
+.hs-submit{
+  width:100%;display:flex;align-items:stretch;border-radius:12px;overflow:hidden;
+  border:1.5px solid rgba(28,60,102,.1);box-shadow:0 10px 26px rgba(28,60,102,.2);
+  cursor:pointer;background:none;padding:0;margin-top:8px;transition:transform .2s,box-shadow .2s;
+}
+.hs-submit:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(28,60,102,.28);}
+.hs-submit:disabled{opacity:.55;cursor:not-allowed;transform:none;}
+.hs-submit-icon{
+  width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#1a3a5a;
+  background:linear-gradient(160deg,#FCEBB0,#F7DD7D 55%,#EEC85A);
+}
+.hs-submit-label{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:14.5px;font-weight:700;color:#fff;background:#1c3c66;padding:15px 20px;
+}
+.hs-submit-note{font-size:11.5px;color:var(--ink3);margin-top:10px;text-align:center;}
+.hs-back-btn{
+  width:100%;text-align:center;padding:13px;margin-top:12px;border-radius:10px;
+  border:1.5px solid var(--border2);background:#fff;color:var(--ink2);font-size:13.5px;font-weight:600;
+  cursor:pointer;font-family:inherit;
+}
+.hs-back-btn:hover{background:var(--light);}
+
+.hs-status{margin-top:16px;padding:14px 16px;border-radius:10px;font-size:13.5px;display:none;}
+.hs-status.ok{display:block;background:var(--greenl);color:#065f46;border:1px solid rgba(5,150,105,.25);}
+.hs-status.err{display:block;background:#FEF2F2;color:#991B1B;border:1px solid rgba(220,38,38,.25);}
+
+.spinner{
+  width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;
+  border-radius:50%;display:inline-block;animation:spin .7s linear infinite;margin-right:6px;vertical-align:-2px;
+}
+
+/* ── 確認画面 ── */
+.hs-review-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.hs-review-item:last-child{border-bottom:none;}
+.hs-review-label{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.hs-review-value{font-size:13.5px;color:var(--ink);line-height:1.75;white-space:pre-wrap;}
+.hs-review-value.empty{color:var(--ink3);}
+.hs-review-section-title{font-family:'Cormorant Garamond',serif;font-size:19px;color:#1c3c66;margin:26px 0 6px;}
+.hs-review-section-title:first-child{margin-top:0;}
+
+.hs-hidden{display:none !important;}
+
+/* ── モーダル ── */
+.hs-modal-overlay{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(10,20,40,.55);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  opacity:0;visibility:hidden;
+  transition:opacity .25s ease,visibility .25s ease;
+}
+.hs-modal-overlay.show{opacity:1;visibility:visible;}
+.hs-modal{
+  position:relative;
+  width:100%;max-width:460px;
+  background:#fff;border-radius:20px;
+  padding:40px 24px 32px;
+  box-shadow:0 30px 70px rgba(10,20,40,.35);
+  text-align:center;
+  transform:translateY(16px) scale(.98);
+  transition:transform .25s ease;
+  max-height:88vh;overflow-y:auto;
+}
+.hs-modal-overlay.show .hs-modal{transform:translateY(0) scale(1);}
+.hs-modal-icon{
+  width:60px;height:60px;border-radius:50%;margin:0 auto 20px;
+  background:var(--greenl);color:var(--green);
+  display:flex;align-items:center;justify-content:center;
+}
+.hs-modal-icon svg{width:28px;height:28px;}
+.hs-modal-title{
+  font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;
+  color:#1c3c66;margin-bottom:16px;white-space:nowrap;
+}
+.hs-modal-text{font-size:13.5px;color:var(--ink2);line-height:1.85;text-align:left;}
+.hs-modal-note{
+  margin-top:22px;padding:18px 20px;border-radius:12px;
+  background:var(--amber2);border:1px solid rgba(217,168,45,.3);
+  text-align:left;
+}
+.hs-modal-note .hs-modal-text{color:#7a5a12;}
+.hs-modal-ok{
+  margin-top:26px;width:100%;
+  background:linear-gradient(135deg,#4a7bc4,#2f5590);color:#fff;
+  border:none;border-radius:10px;padding:13px;
+  font-size:14px;font-weight:700;cursor:pointer;
+  transition:opacity .2s;
+}
+.hs-modal-ok:hover{opacity:.9;}
+</style>
+</head>
+<body>
+
+<div class="hs-hero">
+  <a href="#" class="hs-back" id="hsBack">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    戻る
+  </a>
+  <div class="hs-hero-inner">
+    <div class="hs-eyebrow">PRE-CONSULTATION SHEET</div>
+    <h1 class="hs-title">無料相談<em>ヒアリングシート</em></h1>
+    <p class="hs-sub">
+      FDA対応に関する現状・お悩み・ご希望の支援内容を事前にお伺いします。<br>
+      ご記入いただくことで、当日の無料相談をより充実した内容でご案内できます。
+    </p>
+    <div class="hs-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      所要時間の目安：約5分
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 入力フォーム ══════════ -->
+<form class="hs-wrap" id="hearingForm" novalidate>
+
+  <!-- 1. 会社・担当者情報 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">1</div><div class="hs-card-title">会社・担当者情報</div></div>
+
+    <div class="hs-q">
+      <div class="hs-q-label">会社名<span class="req">*</span></div>
+      <input type="text" class="hs-input" id="company">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">ホームページURL</div>
+      <input type="url" class="hs-input" id="websiteUrl" placeholder="https://">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">担当者名<span class="req">*</span></div>
+      <input type="text" class="hs-input" id="contactName">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">電話番号</div>
+      <input type="tel" class="hs-input" id="phone">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">メールアドレス<span class="req">*</span></div>
+      <input type="email" class="hs-input" id="email">
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">会社所在地（都道府県）<span class="req">*</span></div>
+      <select class="hs-select" id="prefecture">
+        <option value="">選択してください</option>
+        <option value="北海道">北海道</option>
+        <option value="青森県">青森県</option>
+        <option value="岩手県">岩手県</option>
+        <option value="宮城県">宮城県</option>
+        <option value="秋田県">秋田県</option>
+        <option value="山形県">山形県</option>
+        <option value="福島県">福島県</option>
+        <option value="茨城県">茨城県</option>
+        <option value="栃木県">栃木県</option>
+        <option value="群馬県">群馬県</option>
+        <option value="埼玉県">埼玉県</option>
+        <option value="千葉県">千葉県</option>
+        <option value="東京都">東京都</option>
+        <option value="神奈川県">神奈川県</option>
+        <option value="新潟県">新潟県</option>
+        <option value="富山県">富山県</option>
+        <option value="石川県">石川県</option>
+        <option value="福井県">福井県</option>
+        <option value="山梨県">山梨県</option>
+        <option value="長野県">長野県</option>
+        <option value="岐阜県">岐阜県</option>
+        <option value="静岡県">静岡県</option>
+        <option value="愛知県">愛知県</option>
+        <option value="三重県">三重県</option>
+        <option value="滋賀県">滋賀県</option>
+        <option value="京都府">京都府</option>
+        <option value="大阪府">大阪府</option>
+        <option value="兵庫県">兵庫県</option>
+        <option value="奈良県">奈良県</option>
+        <option value="和歌山県">和歌山県</option>
+        <option value="鳥取県">鳥取県</option>
+        <option value="島根県">島根県</option>
+        <option value="岡山県">岡山県</option>
+        <option value="広島県">広島県</option>
+        <option value="山口県">山口県</option>
+        <option value="徳島県">徳島県</option>
+        <option value="香川県">香川県</option>
+        <option value="愛媛県">愛媛県</option>
+        <option value="高知県">高知県</option>
+        <option value="福岡県">福岡県</option>
+        <option value="佐賀県">佐賀県</option>
+        <option value="長崎県">長崎県</option>
+        <option value="熊本県">熊本県</option>
+        <option value="大分県">大分県</option>
+        <option value="宮崎県">宮崎県</option>
+        <option value="鹿児島県">鹿児島県</option>
+        <option value="沖縄県">沖縄県</option>
+        <option value="海外">海外</option>
+      </select>
+    </div>
+    <div class="hs-q">
+      <div class="hs-q-label">会社所在地（市区町村以降）</div>
+      <input type="text" class="hs-input" id="addressDetail" placeholder="例：福岡市〇〇区…">
+    </div>
+  </div>
+
+  <!-- 2. FDA対応・認証取得のご経験 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">2</div><div class="hs-card-title">FDA対応・認証取得のご経験</div></div>
+
+    <div class="hs-q">
+      <div class="hs-q-label">これまでに、FDA対応や認証取得に関して、どのような対応をされたことがありますか？<span class="req">*</span></div>
+      <div class="hs-radio-grid">
+        <label class="hs-radio"><input type="radio" name="experience" value="registered">実際に認証・登録等の手続きを行ったことがある</label>
+        <label class="hs-radio"><input type="radio" name="experience" value="researched">情報収集をしたことがある</label>
+        <label class="hs-radio"><input type="radio" name="experience" value="none">まだ特に対応していない</label>
+      </div>
+    </div>
+
+    <div class="hs-sub-block hs-cond" data-when="experience=registered">
+      <div class="hs-q">
+        <div class="hs-q-label">その際、どのように対応されましたか？<span class="req">*</span></div>
+        <div class="hs-radio-grid">
+          <label class="hs-radio"><input type="radio" name="howHandled" value="self">自社で対応した</label>
+          <label class="hs-radio"><input type="radio" name="howHandled" value="outsource">外部の会社や専門家に依頼した</label>
+          <label class="hs-radio"><input type="radio" name="howHandled" value="both">自社と外部の会社・専門家の両方で対応した</label>
+          <label class="hs-radio"><input type="radio" name="howHandled" value="other">その他</label>
+        </div>
+        <input type="text" class="hs-input hs-cond" data-when="howHandled=other" id="howHandledOther" placeholder="その他の内容をご記入ください">
+      </div>
+    </div>
+
+    <div class="hs-sub-block hs-cond" data-when="experience=registered|researched">
+      <div class="hs-q">
+        <div class="hs-q-label">その後の状況や、現在感じている課題を教えてください<span class="req">*</span></div>
+        <div class="hs-q-hint">※複数選択可</div>
+        <div class="hs-check-grid">
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="completed">必要な認証・登録等を完了できた</label>
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="failed">課題があり、認証・登録等を完了できなかった</label>
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="complex">情報は集めたが、内容が複雑でよく分からなかった</label>
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="unclear">何から対応すべきか判断できなかった</label>
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="costUnclear">費用や期間が分からず、対応を進められなかった</label>
+          <label class="hs-check"><input type="checkbox" name="afterStatus" value="other">その他</label>
+        </div>
+        <textarea class="hs-textarea hs-cond" data-when="afterStatus_has=failed" id="afterStatusFailedDetail" placeholder="完了できなかった理由や、現在の課題を具体的にご記載ください"></textarea>
+        <input type="text" class="hs-input hs-cond" data-when="afterStatus_has=other" id="afterStatusOther" placeholder="その他の内容をご記入ください">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 今後希望する支援内容 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">3</div><div class="hs-card-title">今後希望する支援内容</div></div>
+
+    <div class="hs-q">
+      <div class="hs-q-label">ご希望のサポート内容・必要な支援範囲を選択してください<span class="req">*</span></div>
+      <div class="hs-q-hint">※複数選択可／必要なサポートが分からない場合は「相談して決めたい」をお選びください</div>
+
+      <div class="hs-check-grid">
+        <label class="hs-check"><input type="checkbox" name="support" value="consult">必要なサポート内容を相談して決めたい</label>
+      </div>
+
+      <div class="hs-support-group-label">総合サポート</div>
+      <div class="hs-check-grid">
+        <label class="hs-check"><input type="checkbox" name="support" value="full_all">FDA対応から米国向け輸送まで、まとめて依頼したい</label>
+        <label class="hs-check"><input type="checkbox" name="support" value="full_fda_only">FDAの認証・登録手続きのみ、まとめて依頼したい</label>
+      </div>
+
+      <div class="hs-accordion" id="accSpot">
+        <button type="button" class="hs-accordion-toggle" data-accordion-toggle>FDA関連のスポット依頼<span class="hs-accordion-arrow">▾</span></button>
+        <div class="hs-accordion-body">
+          <div class="hs-check-grid">
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_ingredient">原材料・成分の調査</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_facility_reg">FDA施設登録</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_facility_renew">FDA施設登録の更新</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_account">FDA関連アカウントの作成</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_label">商品ラベルの作成・確認</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_nutrition">栄養成分表示の作成</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_prior_notice">米国向け事前申告</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_prop65">Proposition 65に関する調査</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_list_reg">FDA関連リストへの登録・更新</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_ongoing">FDA取得・登録後の継続管理</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="spot_other">その他のFDA関連サポート</label>
+          </div>
+          <input type="text" class="hs-input hs-cond" data-when="support_has=spot_other" id="supportSpotOther" placeholder="内容をご記入ください">
+        </div>
+      </div>
+
+      <div class="hs-accordion" id="accAmz">
+        <button type="button" class="hs-accordion-toggle" data-accordion-toggle>米国輸出・Amazon関連のサポート<span class="hs-accordion-arrow">▾</span></button>
+        <div class="hs-accordion-body">
+          <div class="hs-check-grid">
+            <label class="hs-check"><input type="checkbox" name="support" value="amz_shipping">FDA対応完了後の米国向け輸送</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="amz_account">米国Amazonアカウントの新規開設から初回出荷まで</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="amz_listing">米国Amazonの商品ページ作成</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="amz_fba">米国Amazon FBA向け物流代行</label>
+            <label class="hs-check"><input type="checkbox" name="support" value="amz_other">その他の米国輸出・Amazon関連サポート</label>
+          </div>
+          <input type="text" class="hs-input hs-cond" data-when="support_has=amz_other" id="supportAmzOther" placeholder="内容をご記入ください">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. 商品情報 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">4</div><div class="hs-card-title">商品情報</div></div>
+
+    <div class="hs-q">
+      <div class="hs-q-label">ご相談予定の商品数をご記入ください<span class="req">*</span></div>
+      <input type="number" class="hs-input" id="productCount" min="1" placeholder="例：3">
+    </div>
+
+    <div id="productsContainer"></div>
+  </div>
+
+  <!-- 5. 予定している米国での販路 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">5</div><div class="hs-card-title">予定している米国での販路</div></div>
+
+    <div class="hs-q">
+      <div class="hs-q-label">現在予定している、または検討している販路を選択してください<span class="req">*</span></div>
+      <div class="hs-q-hint">※複数選択可</div>
+      <div class="hs-check-grid">
+        <label class="hs-check"><input type="checkbox" name="channels" value="own_ec">自社ECサイト</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="amazon">Amazon.com</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="other_ec">Amazon以外のECモール</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="wholesale">米国の卸売会社・ディストリビューター</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="retail">小売店・専門店</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="expo">展示会・B2B商談会</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="undecided">まだ決まっていない</label>
+        <label class="hs-check"><input type="checkbox" name="channels" value="other">その他</label>
+      </div>
+      <input type="text" class="hs-input hs-cond" data-when="channels_has=other_ec" id="otherEcName" placeholder="検討しているECモール名をご記入ください">
+      <input type="text" class="hs-input hs-cond" data-when="channels_has=other" id="otherChannelName" placeholder="検討している販路をご記入ください">
+    </div>
+  </div>
+
+  <!-- 6. その他 -->
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">6</div><div class="hs-card-title">その他</div></div>
+    <div class="hs-q">
+      <div class="hs-q-label">その他、ご相談がありましたらご記載ください</div>
+      <textarea class="hs-textarea" id="otherNotes" placeholder="ご自由にご記入ください"></textarea>
+      <div class="hs-file-wrap">
+        <label class="hs-file-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+          ファイルを添付する
+          <input type="file" multiple accept=".pdf,.xlsx,.xls,.doc,.docx,.jpg,.jpeg,.png" data-file-target="otherFiles">
+        </label>
+        <div class="hs-file-hint">PDF・Excel・Word・JPEG・PNG形式に対応しています</div>
+        <div class="hs-file-list" data-file-list="otherFiles"></div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="hs-submit" id="toReviewBtn">
+    <span class="hs-submit-icon">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    </span>
+    <span class="hs-submit-label" id="toReviewLabel">入力内容を確認する →</span>
+  </button>
+  <div class="hs-status" id="hsFormStatus"></div>
+</form>
+
+<!-- ══════════ 確認画面 ══════════ -->
+<div class="hs-wrap hs-hidden" id="reviewWrap">
+  <div class="hs-card">
+    <div class="hs-card-head"><div class="hs-card-num">✓</div><div class="hs-card-title">入力内容のご確認</div></div>
+    <p style="font-size:13px;color:var(--ink2);margin-bottom:8px;">以下の内容でよろしければ「この内容で送信する」を押してください。修正する場合は「編集に戻る」から内容を変更できます。</p>
+    <div id="reviewContent"></div>
+  </div>
+
+  <button type="button" class="hs-submit" id="finalSubmitBtn" data-ga-event="click_hearing_submit">
+    <span class="hs-submit-icon">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+    </span>
+    <span class="hs-submit-label" id="finalSubmitLabel">この内容で送信する →</span>
+  </button>
+  <button type="button" class="hs-back-btn" id="backToFormBtn">← 編集に戻る</button>
+  <div class="hs-status" id="hsReviewStatus"></div>
+</div>
+
+<!-- ══════════ 完了ポップアップ ══════════ -->
+<div class="hs-modal-overlay" id="hsModalOverlay">
+  <div class="hs-modal">
+    <div class="hs-modal-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h2 class="hs-modal-title">ヒアリングシートを受け付けました</h2>
+    <p class="hs-modal-text">
+      ヒアリングシートのご記入ありがとうございます。<br>
+      お申込み時のメールアドレスに、当日のオンラインミーティングのURLをお送りいたしましたので、当日はこちらよりご参加ください。
+    </p>
+    <div class="hs-modal-note">
+      <p class="hs-modal-text">
+        ※ヒアリングシートは編集可能です。内容に変更がある場合は、再度ご入力のうえ送信ボタンを押してください。<br>
+        ミーティング1日前までにご変更をお願いいたします。
+      </p>
+    </div>
+    <button type="button" class="hs-modal-ok" id="hsModalOk">閉じる</button>
+  </div>
+</div>
+
+<script>
+const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbwau_lwj4MkLXnOggRytybZakDdxMorJh_TYvT0owcW1waKuyxqMet7F1JjLXYsrmy6/exec";
+const MAX_PRODUCTS = 20; // 「6商品以上」の実質的な上限（安全のための上限）
+
+const params = new URLSearchParams(location.search);
+const submissionId = params.get('id') || '';
+
+const form = document.getElementById('hearingForm');
+const statusBox = document.getElementById('hsFormStatus');
+const reviewStatusBox = document.getElementById('hsReviewStatus');
+
+/* 「戻る」リンク：予約完了メールの前のページに戻す */
+document.getElementById('hsBack').addEventListener('click', (e) => {
+  e.preventDefault();
+  if(document.referrer) history.back(); else location.href = 'index.html';
+});
+
+/* ===== ファイルアップロード管理 ===== */
+// key -> [{name, url}]
+const uploadedFiles = {};
+
+function initFileInputs(root){
+  root.querySelectorAll('[data-file-target]').forEach(input => {
+    if(input.dataset.bound) return;
+    input.dataset.bound = '1';
+    const key = input.dataset.fileTarget;
+    if(!uploadedFiles[key]) uploadedFiles[key] = [];
+    input.addEventListener('change', () => handleFileSelect(input, key));
+  });
+}
+
+async function handleFileSelect(input, key){
+  const files = Array.from(input.files || []);
+  input.value = '';
+  const listEl = document.querySelector(`[data-file-list="${key}"]`);
+  if(!listEl) return;
+
+  for(const file of files){
+    const item = document.createElement('div');
+    item.className = 'hs-file-item uploading';
+    item.innerHTML = `<span class="sp"></span><span>${escapeHtml(file.name)} をアップロード中…</span>`;
+    listEl.appendChild(item);
+
+    try{
+      const base64 = await fileToBase64(file);
+      const res = await fetch(ENDPOINT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ formType: 'fileUpload', fileName: file.name, mimeType: file.type, base64: base64, company: val('company') })
+      });
+      const json = await res.json();
+      if(json && json.result === 'success'){
+        uploadedFiles[key].push({ name: file.name, url: json.url });
+        item.className = 'hs-file-item';
+        item.innerHTML = `<span>✓ <a href="${escapeHtml(json.url)}" target="_blank" rel="noopener">${escapeHtml(file.name)}</a></span><span class="rm" data-remove-file>×</span>`;
+        item.querySelector('[data-remove-file]').addEventListener('click', () => {
+          uploadedFiles[key] = uploadedFiles[key].filter(f => f.url !== json.url);
+          item.remove();
+        });
+      } else {
+        item.className = 'hs-file-item error';
+        item.textContent = `✕ ${file.name}：${(json && json.error) || 'アップロードに失敗しました'}`;
+      }
+    }catch(err){
+      item.className = 'hs-file-item error';
+      item.textContent = `✕ ${file.name}：アップロードに失敗しました`;
+    }
+  }
+}
+
+function fileToBase64(file){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ===== 条件分岐（data-when）===== */
+function evaluateConditions(){
+  document.querySelectorAll('[data-when]').forEach(el => {
+    const cond = el.dataset.when;
+    const eqIdx = cond.indexOf('=');
+    const key = cond.substring(0, eqIdx);
+    const values = cond.substring(eqIdx + 1).split('|');
+    let match = false;
+
+    if(key.endsWith('_has')){
+      const name = key.replace('_has', '');
+      const checked = Array.from(form.querySelectorAll(`[name="${name}"]:checked`)).map(i => i.value);
+      match = values.some(v => checked.includes(v));
+    } else {
+      const radio = form.querySelector(`[name="${key}"]:checked`);
+      const selectEl = document.getElementById(key);
+      const currentVal = radio ? radio.value : (selectEl ? selectEl.value : '');
+      match = values.includes(currentVal);
+    }
+    el.classList.toggle('show', match);
+  });
+}
+form.addEventListener('change', evaluateConditions);
+document.getElementById('productCount').addEventListener('change', evaluateConditions);
+
+/* ===== アコーディオン ===== */
+document.querySelectorAll('[data-accordion-toggle]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.hs-accordion').classList.toggle('open');
+  });
+});
+
+/* ===== 商品ブロックの動的生成 ===== */
+const productsContainer = document.getElementById('productsContainer');
+let currentProductCount = 0;
+
+function getProductCountValue(){
+  const n = parseInt(document.getElementById('productCount').value, 10);
+  return (n && n > 0) ? Math.min(n, MAX_PRODUCTS) : 0;
+}
+
+function buildProductBlock(index){
+  const n = index + 1;
+  const wrap = document.createElement('div');
+  wrap.className = 'hs-product';
+  wrap.dataset.productIndex = index;
+  wrap.innerHTML = `
+    <div class="hs-product-title"><span class="badge">${n}</span>商品${n}</div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">商品名<span class="req">*</span></div>
+      <input type="text" class="hs-input" data-field="name">
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">商品URL<span class="req">*</span></div>
+      <div class="hs-q-hint">商品ページがない場合は、商品資料や商品情報を確認できるURLをご記載ください。URLが無い場合は「なし」とご記載ください。</div>
+      <input type="text" class="hs-input" data-field="url">
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">商品カテゴリ<span class="req">*</span></div>
+      <select class="hs-select" data-field="category">
+        <option value="">選択してください</option>
+        <option value="食品">食品</option>
+        <option value="飲料">飲料</option>
+        <option value="化粧品">化粧品</option>
+        <option value="サプリメント">サプリメント</option>
+        <option value="ペット用品">ペット用品</option>
+        <option value="雑貨">雑貨</option>
+        <option value="その他">その他</option>
+      </select>
+      <input type="text" class="hs-input hs-cond" data-field="categoryOther" data-product-when="category=その他" placeholder="具体的なカテゴリをご記入ください">
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">商品の用途・対象<span class="req">*</span></div>
+      <div class="hs-q-hint">例：業務用抹茶、毛髪の洗浄・保湿用シャンプーなど</div>
+      <input type="text" class="hs-input" data-field="usage">
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">原材料・成分</div>
+      <div class="hs-q-hint">食品、飲料、化粧品、サプリメント、薬品等の場合は、使用しているすべての原材料・成分をご記載ください。成分表や原材料資料がある場合はファイルを添付してください。</div>
+      <textarea class="hs-textarea" data-field="ingredients"></textarea>
+      <div class="hs-file-wrap">
+        <label class="hs-file-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+          ファイルを添付する
+          <input type="file" multiple accept=".pdf,.xlsx,.xls,.doc,.docx,.jpg,.jpeg,.png" data-file-target="product_${index}_ingredientsFiles">
+        </label>
+        <div class="hs-file-hint">PDF・Excel・Word・JPEG・PNG形式に対応しています</div>
+        <div class="hs-file-list" data-file-list="product_${index}_ingredientsFiles"></div>
+      </div>
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">1商品あたりの包装仕様<span class="req">*</span></div>
+      <div class="hs-q-hint">例：外箱サイズ、商品サイズ、内容量、重量、入り数、容器の種類など</div>
+      <textarea class="hs-textarea" data-field="packaging"></textarea>
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">賞味期限・消費期限<span class="req">*</span></div>
+      <div class="hs-q-hint">例：製造日から1年間、製造日から24か月、賞味期限なしなど</div>
+      <input type="text" class="hs-input" data-field="expiry">
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">製造・加工・包装・保管を行う施設情報<span class="req">*</span></div>
+      <div class="hs-q-hint">該当する業務区分を選択し、その業務を行う会社名・施設名をご記入ください。複数ある場合は行を追加してください。</div>
+      <div data-facility-list></div>
+      <button type="button" class="hs-add-btn" data-add-facility>＋ 施設情報を追加</button>
+    </div>
+
+    <div class="hs-product-row">
+      <div class="hs-q-label">温度管理の必要性<span class="req">*</span></div>
+      <div class="hs-radio-grid">
+        <label class="hs-radio"><input type="radio" name="temperature_${index}" value="ambient">常温で保管・輸送可能</label>
+        <label class="hs-radio"><input type="radio" name="temperature_${index}" value="chilled">冷蔵管理が必要</label>
+        <label class="hs-radio"><input type="radio" name="temperature_${index}" value="frozen">冷凍管理が必要</label>
+        <label class="hs-radio"><input type="radio" name="temperature_${index}" value="other">その他の温度条件がある</label>
+        <label class="hs-radio"><input type="radio" name="temperature_${index}" value="unknown">不明</label>
+      </div>
+      <input type="text" class="hs-input hs-cond" data-field="temperatureDetail" data-product-when="temperature_${index}=chilled|frozen|other" placeholder="例：10℃以下での冷蔵保管、マイナス18℃以下での冷凍保管など">
+    </div>
+  `;
+
+  // カテゴリ・温度の条件分岐（商品ブロック内は独自name空間なので専用ロジックで処理）
+  wrap.querySelectorAll('[data-product-when]').forEach(el => {
+    const cond = el.dataset.productWhen;
+    const eqIdx = cond.indexOf('=');
+    const fieldKey = cond.substring(0, eqIdx);
+    const values = cond.substring(eqIdx + 1).split('|');
+    const evalFn = () => {
+      let currentVal = '';
+      const radio = wrap.querySelector(`[name="${fieldKey}"]:checked`);
+      if(radio){
+        currentVal = radio.value;
+      } else {
+        const bySel = wrap.querySelector(`select[data-field="${fieldKey}"]`);
+        if(bySel) currentVal = bySel.value;
+      }
+      el.classList.toggle('show', values.includes(currentVal));
+    };
+    wrap.addEventListener('change', evalFn);
+  });
+
+  // 施設情報の追加
+  const facilityList = wrap.querySelector('[data-facility-list]');
+  wrap.querySelector('[data-add-facility]').addEventListener('click', () => addFacilityRow(facilityList));
+  addFacilityRow(facilityList); // 最初は1行表示
+
+  initFileInputs(wrap);
+  return wrap;
+}
+
+function addFacilityRow(listEl){
+  const row = document.createElement('div');
+  row.className = 'hs-facility-row';
+  row.innerHTML = `
+    <select class="hs-select" data-facility-type>
+      <option value="">業務区分を選択</option>
+      <option value="製造">製造</option>
+      <option value="加工">加工</option>
+      <option value="包装">包装</option>
+      <option value="保管">保管</option>
+      <option value="充填">充填</option>
+    </select>
+    <input type="text" class="hs-input" data-facility-name placeholder="会社名・施設名">
+    <button type="button" class="hs-facility-remove" data-remove-facility aria-label="削除">×</button>
+  `;
+  row.querySelector('[data-remove-facility]').addEventListener('click', () => {
+    if(listEl.children.length > 1) row.remove();
+  });
+  listEl.appendChild(row);
+}
+
+function renderProducts(){
+  const count = getProductCountValue();
+  if(count === currentProductCount) return;
+
+  if(count > currentProductCount){
+    for(let i = currentProductCount; i < count; i++){
+      productsContainer.appendChild(buildProductBlock(i));
+    }
+  } else {
+    while(productsContainer.children.length > count){
+      const last = productsContainer.lastElementChild;
+      const idx = last.dataset.productIndex;
+      delete uploadedFiles[`product_${idx}_ingredientsFiles`];
+      productsContainer.removeChild(last);
+    }
+  }
+  currentProductCount = count;
+}
+document.getElementById('productCount').addEventListener('input', renderProducts);
+
+/* ===== フォーム値の収集 ===== */
+function getCheckedValues(name, root){
+  return Array.from((root || document).querySelectorAll(`[name="${name}"]:checked`)).map(i => i.value);
+}
+function getRadioValue(name, root){
+  const el = (root || document).querySelector(`[name="${name}"]:checked`);
+  return el ? el.value : '';
+}
+function val(id){
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : '';
+}
+
+function collectFormData(){
+  const products = [];
+  productsContainer.querySelectorAll('.hs-product').forEach((block, index) => {
+    const facilities = [];
+    block.querySelectorAll('[data-facility-list] > .hs-facility-row').forEach(row => {
+      const type = row.querySelector('[data-facility-type]').value;
+      const name = row.querySelector('[data-facility-name]').value.trim();
+      if(type || name) facilities.push({ type, name });
+    });
+    products.push({
+      name: block.querySelector('[data-field="name"]').value.trim(),
+      url: block.querySelector('[data-field="url"]').value.trim(),
+      category: block.querySelector('[data-field="category"]').value,
+      categoryOther: block.querySelector('[data-field="categoryOther"]').value.trim(),
+      usage: block.querySelector('[data-field="usage"]').value.trim(),
+      ingredients: block.querySelector('[data-field="ingredients"]').value.trim(),
+      ingredientsFiles: uploadedFiles[`product_${index}_ingredientsFiles`] || [],
+      packaging: block.querySelector('[data-field="packaging"]').value.trim(),
+      expiry: block.querySelector('[data-field="expiry"]').value.trim(),
+      facilities: facilities,
+      temperature: getRadioValue(`temperature_${index}`, block),
+      temperatureDetail: block.querySelector('[data-field="temperatureDetail"]').value.trim()
+    });
+  });
+
+  return {
+    formType: 'hearing',
+    submissionId: submissionId,
+    company: val('company'),
+    websiteUrl: val('websiteUrl'),
+    contactName: val('contactName'),
+    phone: val('phone'),
+    email: val('email'),
+    prefecture: val('prefecture'),
+    addressDetail: val('addressDetail'),
+    experience: getRadioValue('experience'),
+    howHandled: getRadioValue('howHandled'),
+    howHandledOther: val('howHandledOther'),
+    afterStatus: getCheckedValues('afterStatus'),
+    afterStatusFailedDetail: val('afterStatusFailedDetail'),
+    afterStatusOther: val('afterStatusOther'),
+    support: getCheckedValues('support'),
+    supportSpotOther: val('supportSpotOther'),
+    supportAmzOther: val('supportAmzOther'),
+    productCount: document.getElementById('productCount').value,
+    products: products,
+    channels: getCheckedValues('channels'),
+    otherEcName: val('otherEcName'),
+    otherChannelName: val('otherChannelName'),
+    otherNotes: val('otherNotes'),
+    otherFiles: uploadedFiles['otherFiles'] || [],
+    page: location.href,
+    submittedAt: new Date().toISOString()
+  };
+}
+
+/* ===== 入力チェック ===== */
+function validateForm(){
+  const errors = [];
+  if(!val('company')) errors.push('会社名');
+  if(!val('contactName')) errors.push('担当者名');
+  if(!val('email')) errors.push('メールアドレス');
+  if(!val('prefecture')) errors.push('会社所在地（都道府県）');
+  if(!getRadioValue('experience')) errors.push('FDA対応・認証取得のご経験');
+
+  const exp = getRadioValue('experience');
+  if(exp === 'registered' && !getRadioValue('howHandled')) errors.push('その際の対応方法');
+  if((exp === 'registered' || exp === 'researched') && getCheckedValues('afterStatus').length === 0) errors.push('その後の状況・課題');
+
+  if(getCheckedValues('support').length === 0) errors.push('ご希望のサポート内容');
+
+  if(!document.getElementById('productCount').value) errors.push('ご相談予定の商品数');
+
+  let productError = false;
+  productsContainer.querySelectorAll('.hs-product').forEach((block, index) => {
+    const req = ['name','url','category','usage','packaging','expiry'];
+    req.forEach(f => {
+      const el = block.querySelector(`[data-field="${f}"]`);
+      if(el && !el.value.trim()) productError = true;
+    });
+    if(!getRadioValue(`temperature_${index}`, block)) productError = true;
+    const facilityRows = block.querySelectorAll('[data-facility-list] > .hs-facility-row');
+    const hasFacility = Array.from(facilityRows).some(r => r.querySelector('[data-facility-name]').value.trim());
+    if(!hasFacility) productError = true;
+  });
+  if(productError) errors.push('商品情報の必須項目（各商品ごと）');
+
+  if(getCheckedValues('channels').length === 0) errors.push('予定している米国での販路');
+
+  return errors;
+}
+
+/* ===== 確認画面 ===== */
+const reviewWrap = document.getElementById('reviewWrap');
+const reviewContent = document.getElementById('reviewContent');
+
+function reviewRow(label, value){
+  const isEmpty = !value;
+  return `<div class="hs-review-item"><div class="hs-review-label">${escapeHtml(label)}</div><div class="hs-review-value${isEmpty ? ' empty' : ''}">${escapeHtml(value || '未回答')}</div></div>`;
+}
+
+const experienceLabelMap = { registered: '実際に認証・登録等の手続きを行ったことがある', researched: '情報収集をしたことがある', none: 'まだ特に対応していない' };
+const howHandledLabelMap = { self: '自社で対応した', outsource: '外部の会社や専門家に依頼した', both: '自社と外部の会社・専門家の両方で対応した', other: 'その他' };
+const afterStatusLabelMap = { completed: '必要な認証・登録等を完了できた', failed: '課題があり、認証・登録等を完了できなかった', complex: '情報は集めたが、内容が複雑でよく分からなかった', unclear: '何から対応すべきか判断できなかった', costUnclear: '費用や期間が分からず、対応を進められなかった', other: 'その他' };
+const supportLabelMap = { consult: '必要なサポート内容を相談して決めたい', full_all: 'FDA対応から米国向け輸送まで、まとめて依頼したい', full_fda_only: 'FDAの認証・登録手続きのみ、まとめて依頼したい', spot_ingredient: '原材料・成分の調査', spot_facility_reg: 'FDA施設登録', spot_facility_renew: 'FDA施設登録の更新', spot_account: 'FDA関連アカウントの作成', spot_label: '商品ラベルの作成・確認', spot_nutrition: '栄養成分表示の作成', spot_prior_notice: '米国向け事前申告', spot_prop65: 'Proposition 65に関する調査', spot_list_reg: 'FDA関連リストへの登録・更新', spot_ongoing: 'FDA取得・登録後の継続管理', spot_other: 'その他のFDA関連サポート', amz_shipping: 'FDA対応完了後の米国向け輸送', amz_account: '米国Amazonアカウントの新規開設から初回出荷まで', amz_listing: '米国Amazonの商品ページ作成', amz_fba: '米国Amazon FBA向け物流代行', amz_other: 'その他の米国輸出・Amazon関連サポート' };
+const channelLabelMap = { own_ec: '自社ECサイト', amazon: 'Amazon.com', other_ec: 'Amazon以外のECモール', wholesale: '米国の卸売会社・ディストリビューター', retail: '小売店・専門店', expo: '展示会・B2B商談会', undecided: 'まだ決まっていない', other: 'その他' };
+const temperatureLabelMap = { ambient: '常温で保管・輸送可能', chilled: '冷蔵管理が必要', frozen: '冷凍管理が必要', other: 'その他の温度条件がある', unknown: '不明' };
+
+function buildReview(data){
+  let html = '';
+
+  html += `<div class="hs-review-section-title">1. 会社・担当者情報</div>`;
+  html += reviewRow('会社名', data.company);
+  html += reviewRow('ホームページURL', data.websiteUrl);
+  html += reviewRow('担当者名', data.contactName);
+  html += reviewRow('電話番号', data.phone);
+  html += reviewRow('メールアドレス', data.email);
+  html += reviewRow('会社所在地', [data.prefecture, data.addressDetail].filter(Boolean).join(' '));
+
+  html += `<div class="hs-review-section-title">2. FDA対応・認証取得のご経験</div>`;
+  html += reviewRow('これまでの対応', experienceLabelMap[data.experience] || '');
+  if(data.experience === 'registered'){
+    html += reviewRow('対応方法', (howHandledLabelMap[data.howHandled] || '') + (data.howHandledOther ? '（' + data.howHandledOther + '）' : ''));
+  }
+  if(data.experience === 'registered' || data.experience === 'researched'){
+    const labels = data.afterStatus.map(v => afterStatusLabelMap[v] || v).join(' / ');
+    let extra = '';
+    if(data.afterStatusFailedDetail) extra += '\n課題の詳細：' + data.afterStatusFailedDetail;
+    if(data.afterStatusOther) extra += '\nその他：' + data.afterStatusOther;
+    html += reviewRow('その後の状況・課題', labels + extra);
+  }
+
+  html += `<div class="hs-review-section-title">3. 今後希望する支援内容</div>`;
+  let supportText = data.support.map(v => supportLabelMap[v] || v).join(' / ');
+  if(data.supportSpotOther) supportText += '\nFDA関連その他：' + data.supportSpotOther;
+  if(data.supportAmzOther) supportText += '\nAmazon関連その他：' + data.supportAmzOther;
+  html += reviewRow('サポート内容', supportText);
+
+  html += `<div class="hs-review-section-title">4. 商品情報</div>`;
+  html += reviewRow('商品数', data.productCount ? (data.productCount + '商品') : '');
+  data.products.forEach((p, i) => {
+    const facilitiesText = p.facilities.map(f => f.type + '：' + f.name).join(' / ');
+    const filesText = p.ingredientsFiles.map(f => f.name).join(' / ');
+    let block = '商品名：' + p.name + '\n';
+    block += 'URL：' + p.url + '\n';
+    block += 'カテゴリ：' + (p.category === 'その他' ? p.categoryOther : p.category) + '\n';
+    block += '用途・対象：' + p.usage + '\n';
+    if(p.ingredients) block += '原材料・成分：' + p.ingredients + '\n';
+    if(filesText) block += '添付ファイル：' + filesText + '\n';
+    block += '包装仕様：' + p.packaging + '\n';
+    block += '賞味期限・消費期限：' + p.expiry + '\n';
+    block += '施設情報：' + facilitiesText + '\n';
+    block += '温度管理：' + (temperatureLabelMap[p.temperature] || '') + (p.temperatureDetail ? '（' + p.temperatureDetail + '）' : '');
+    html += reviewRow('商品' + (i + 1), block);
+  });
+
+  html += `<div class="hs-review-section-title">5. 予定している米国での販路</div>`;
+  let channelsText = data.channels.map(v => channelLabelMap[v] || v).join(' / ');
+  if(data.otherEcName) channelsText += '\nECモール名：' + data.otherEcName;
+  if(data.otherChannelName) channelsText += '\nその他販路：' + data.otherChannelName;
+  html += reviewRow('販路', channelsText);
+
+  html += `<div class="hs-review-section-title">6. その他</div>`;
+  let otherText = data.otherNotes || '';
+  if(data.otherFiles.length) otherText += (otherText ? '\n' : '') + '添付ファイル：' + data.otherFiles.map(f => f.name).join(' / ');
+  html += reviewRow('その他ご相談', otherText);
+
+  return html;
+}
+
+document.getElementById('toReviewBtn').addEventListener('click', () => {
+  const errors = validateForm();
+  if(errors.length > 0){
+    statusBox.className = 'hs-status err';
+    statusBox.textContent = '以下の必須項目をご確認ください：' + errors.join('、');
+    statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+  statusBox.className = 'hs-status';
+  statusBox.textContent = '';
+
+  const data = collectFormData();
+  reviewContent.innerHTML = buildReview(data);
+  form.classList.add('hs-hidden');
+  reviewWrap.classList.remove('hs-hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.getElementById('backToFormBtn').addEventListener('click', () => {
+  reviewWrap.classList.add('hs-hidden');
+  form.classList.remove('hs-hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ===== 送信 ===== */
+document.getElementById('finalSubmitBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('finalSubmitBtn');
+  const label = document.getElementById('finalSubmitLabel');
+  btn.disabled = true;
+  label.innerHTML = '<span class="spinner"></span>送信中…';
+
+  if(!submissionId){
+    reviewStatusBox.className = 'hs-status err';
+    reviewStatusBox.textContent = 'このページには紐付けIDが含まれていないため、回答を保存できません。予約完了メール記載のリンクから改めてお開きください。';
+    btn.disabled = false;
+    label.textContent = 'この内容で送信する →';
+    return;
+  }
+
+  const payload = collectFormData();
+
+  try{
+    const res = await fetch(ENDPOINT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json();
+
+    if(json && json.result === 'success'){
+      reviewStatusBox.className = 'hs-status ok';
+      reviewStatusBox.textContent = 'ヒアリングシートを受け付けました。内容を修正して再度送信すると、上書きで更新されます。';
+      if(json.firstSubmission){
+        document.getElementById('hsModalOverlay').classList.add('show');
+      }
+    } else {
+      console.error('ヒアリングシート送信エラー:', json && json.error);
+      reviewStatusBox.className = 'hs-status err';
+      reviewStatusBox.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
+    }
+  }catch(err){
+    console.error('ヒアリングシート送信エラー（通信自体に失敗）:', err);
+    reviewStatusBox.className = 'hs-status err';
+    reviewStatusBox.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しください。';
+  }finally{
+    btn.disabled = false;
+    label.textContent = 'この内容で送信する →';
+  }
+});
+
+/* ===== 初回読み込み：前回の回答があれば復元 ===== */
+function populateForm(data){
+  const setVal = (id, v) => { const el = document.getElementById(id); if(el && v !== undefined) el.value = v; };
+  const setRadio = (name, v) => { const el = form.querySelector(`[name="${name}"][value="${v}"]`); if(el) el.checked = true; };
+  const setChecks = (name, arr) => { (arr || []).forEach(v => { const el = form.querySelector(`[name="${name}"][value="${v}"]`); if(el) el.checked = true; }); };
+
+  setVal('company', data.company); setVal('websiteUrl', data.websiteUrl);
+  setVal('contactName', data.contactName); setVal('phone', data.phone);
+  setVal('email', data.email); setVal('prefecture', data.prefecture); setVal('addressDetail', data.addressDetail);
+
+  if(data.experience) setRadio('experience', data.experience);
+  if(data.howHandled) setRadio('howHandled', data.howHandled);
+  setVal('howHandledOther', data.howHandledOther);
+  setChecks('afterStatus', data.afterStatus);
+  setVal('afterStatusFailedDetail', data.afterStatusFailedDetail);
+  setVal('afterStatusOther', data.afterStatusOther);
+
+  setChecks('support', data.support);
+  setVal('supportSpotOther', data.supportSpotOther);
+  setVal('supportAmzOther', data.supportAmzOther);
+  if(data.supportSpotOther) document.getElementById('accSpot').classList.add('open');
+  if(data.supportAmzOther) document.getElementById('accAmz').classList.add('open');
+
+  if(data.productCount){
+    document.getElementById('productCount').value = data.productCount;
+    renderProducts();
+    (data.products || []).forEach((p, i) => {
+      const block = productsContainer.children[i];
+      if(!block) return;
+      block.querySelector('[data-field="name"]').value = p.name || '';
+      block.querySelector('[data-field="url"]').value = p.url || '';
+      block.querySelector('[data-field="category"]').value = p.category || '';
+      block.querySelector('[data-field="categoryOther"]').value = p.categoryOther || '';
+      block.querySelector('[data-field="usage"]').value = p.usage || '';
+      block.querySelector('[data-field="ingredients"]').value = p.ingredients || '';
+      block.querySelector('[data-field="packaging"]').value = p.packaging || '';
+      block.querySelector('[data-field="expiry"]').value = p.expiry || '';
+      if(p.temperature){
+        const rEl = block.querySelector(`[name="temperature_${i}"][value="${p.temperature}"]`);
+        if(rEl) rEl.checked = true;
+      }
+      block.querySelector('[data-field="temperatureDetail"]').value = p.temperatureDetail || '';
+
+      const facilityList = block.querySelector('[data-facility-list]');
+      if(Array.isArray(p.facilities) && p.facilities.length > 0){
+        facilityList.innerHTML = '';
+        p.facilities.forEach(f => {
+          addFacilityRow(facilityList);
+          const lastRow = facilityList.lastElementChild;
+          lastRow.querySelector('[data-facility-type]').value = f.type || '';
+          lastRow.querySelector('[data-facility-name]').value = f.name || '';
+        });
+      }
+
+      if(Array.isArray(p.ingredientsFiles) && p.ingredientsFiles.length > 0){
+        const key = `product_${i}_ingredientsFiles`;
+        uploadedFiles[key] = p.ingredientsFiles.slice();
+        const listEl = block.querySelector(`[data-file-list="${key}"]`);
+        p.ingredientsFiles.forEach(f => {
+          const item = document.createElement('div');
+          item.className = 'hs-file-item';
+          item.innerHTML = `<span>✓ <a href="${escapeHtml(f.url)}" target="_blank" rel="noopener">${escapeHtml(f.name)}</a></span><span class="rm" data-remove-file>×</span>`;
+          item.querySelector('[data-remove-file]').addEventListener('click', () => {
+            uploadedFiles[key] = uploadedFiles[key].filter(x => x.url !== f.url);
+            item.remove();
+          });
+          listEl.appendChild(item);
+        });
+      }
+    });
+  }
+
+  setChecks('channels', data.channels);
+  setVal('otherEcName', data.otherEcName);
+  setVal('otherChannelName', data.otherChannelName);
+  setVal('otherNotes', data.otherNotes);
+
+  if(Array.isArray(data.otherFiles) && data.otherFiles.length > 0){
+    uploadedFiles['otherFiles'] = data.otherFiles.slice();
+    const listEl = document.querySelector('[data-file-list="otherFiles"]');
+    data.otherFiles.forEach(f => {
+      const item = document.createElement('div');
+      item.className = 'hs-file-item';
+      item.innerHTML = `<span>✓ <a href="${escapeHtml(f.url)}" target="_blank" rel="noopener">${escapeHtml(f.name)}</a></span><span class="rm" data-remove-file>×</span>`;
+      item.querySelector('[data-remove-file]').addEventListener('click', () => {
+        uploadedFiles['otherFiles'] = uploadedFiles['otherFiles'].filter(x => x.url !== f.url);
+        item.remove();
+      });
+      listEl.appendChild(item);
+    });
+  }
+
+  evaluateConditions();
+}
+
+initFileInputs(document);
+
+if(submissionId){
+  fetch(ENDPOINT_URL + '?id=' + encodeURIComponent(submissionId))
+    .then(res => res.json())
+    .then(res => {
+      if(res && res.result === 'success' && res.data){
+        populateForm(res.data);
+        statusBox.className = 'hs-status ok';
+        statusBox.textContent = '内容を修正して再度送信すると上書きされます。';
+      } else if(res && res.result === 'error'){
+        console.error('ヒアリングシート読み込みエラー:', res.error);
+      }
+    })
+    .catch(err => {
+      console.error('ヒアリングシート読み込みエラー（通信自体に失敗）:', err);
+    });
+}
+</script>
+
+<script>
+(function(){
+  const overlay = document.getElementById('hsModalOverlay');
+  const okBtn = document.getElementById('hsModalOk');
+  function closeModal(){ overlay.classList.remove('show'); }
+  if(okBtn) okBtn.addEventListener('click', closeModal);
+  if(overlay) overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+})();
+</script>
+
+<script>
+// 送信ボタンを固有のGA4イベント名で計測する。
+(function(){
+  document.querySelectorAll('[data-ga-event]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(typeof gtag === 'function'){
+        gtag('event', el.dataset.gaEvent);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

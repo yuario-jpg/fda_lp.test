@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLD56Z8ZR7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLD56Z8ZR7');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご予約の変更・キャンセル | FDA Compliance Partner</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:17.5px}
+:root{
+  --navy:#406AAF; --navy2:#427AB5; --navy3:#6a9fd4;
+  --blue:#427AB5; --blue2:#eef4fc; --blue3:#d0e2f5;
+  --amber:#F7DD7D; --amber2:#FFF8E1;
+  --white:#FFFFFF; --light:#F1F5F9;
+  --ink:#1E293B; --ink2:#475569; --ink3:#94A3B8;
+  --border:#E2E8F0; --border2:#CBD5E1;
+  --green:#059669; --greenl:#ECFDF5; --red:#DC2626; --redl:#FEF2F2;
+  --r:10px; --r2:6px;
+}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#f7fafd;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{text-decoration:none;color:inherit}
+
+.mg-hero{
+  background:linear-gradient(120deg,#12294f 0%,#1c3c66 42%,#2f5590 100%);
+  padding:48px 24px 40px;color:#fff;text-align:center;
+}
+.mg-hero h1{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:8px;}
+.mg-hero p{font-size:13.5px;color:#cfe0f5;}
+
+.mg-wrap{max-width:560px;margin:-24px auto 60px;padding:0 20px;}
+.mg-card{
+  background:#fff;border-radius:16px;padding:32px 28px;
+  box-shadow:0 20px 50px rgba(28,60,102,.12);border:1px solid var(--border);
+}
+
+.mg-loading{text-align:center;padding:40px 0;color:var(--ink3);font-size:14px;}
+.mg-loading .spinner{
+  display:inline-block;width:22px;height:22px;border-radius:50%;
+  border:3px solid var(--blue3);border-top-color:var(--navy);
+  animation:spin .8s linear infinite;margin-bottom:14px;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.mg-summary{
+  background:var(--blue2);border-radius:12px;padding:20px 22px;margin-bottom:24px;
+}
+.mg-summary-label{font-size:11.5px;color:var(--ink2);font-weight:700;letter-spacing:.03em;margin-bottom:6px;}
+.mg-summary-value{font-size:19px;font-weight:700;color:#1c3c66;}
+.mg-summary-sub{font-size:12.5px;color:var(--ink2);margin-top:6px;}
+
+.mg-msg{font-size:14px;line-height:1.8;color:var(--ink2);margin-bottom:20px;}
+.mg-msg.warn{
+  background:var(--redl);border:1px solid #fecaca;color:#991b1b;
+  padding:16px 18px;border-radius:10px;font-size:13.5px;
+}
+.mg-msg.ok{
+  background:var(--greenl);border:1px solid #a7f3d0;color:#065f46;
+  padding:16px 18px;border-radius:10px;font-size:13.5px;
+}
+
+.mg-actions{display:flex;flex-direction:column;gap:12px;margin-top:8px;}
+.mg-btn{
+  width:100%;padding:14px 20px;border-radius:12px;font-size:14.5px;font-weight:700;
+  cursor:pointer;border:1.5px solid var(--border2);background:#fff;color:#1c3c66;
+  transition:all .2s;
+}
+.mg-btn:hover{border-color:var(--navy3);background:var(--blue2);}
+.mg-btn.primary{
+  background:#1c3c66;color:#fff;border-color:transparent;
+  box-shadow:0 10px 26px rgba(28,60,102,.2);
+}
+.mg-btn.primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(28,60,102,.28);}
+.mg-btn.danger{color:var(--red);border-color:#fecaca;}
+.mg-btn.danger:hover{background:var(--redl);border-color:var(--red);}
+.mg-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.mg-btn .spinner{
+  display:inline-block;width:14px;height:14px;border-radius:50%;
+  border:2px solid currentColor;border-top-color:transparent;opacity:.85;
+  animation:spin .8s linear infinite;vertical-align:-2px;
+}
+
+.mg-back{display:inline-block;margin-top:16px;font-size:12.5px;color:var(--ink3);cursor:pointer;text-decoration:underline;}
+
+/* ── カレンダー（booking.htmlと共通のスタイル） ── */
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin:20px 0 14px;}
+.cal-month{font-family:'Cormorant Garamond',serif;font-size:19px;color:#1c3c66;font-weight:500;}
+.cal-btn{
+  width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink2);
+  transition:all .2s;font-size:13px;
+}
+.cal-btn:hover{background:var(--blue2);border-color:var(--navy3);color:var(--navy);}
+.cal-btn:disabled{opacity:.3;cursor:not-allowed;}
+.cal-weekdays{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:11.5px;color:var(--ink3);font-weight:600;margin-bottom:6px;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.cal-cell{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  border-radius:9px;font-size:13px;color:var(--ink);cursor:default;position:relative;
+}
+.cal-cell.empty{visibility:hidden;}
+.cal-cell.past{color:var(--ink3);opacity:.4;}
+.cal-cell.weekend-off{color:var(--ink3);opacity:.45;}
+.cal-cell.available{cursor:pointer;font-weight:500;background:var(--blue2);color:var(--navy);transition:all .2s;}
+.cal-cell.available:hover{background:var(--navy3);color:#fff;}
+.cal-cell.selected{background:linear-gradient(135deg,#4a7bc4,#2f5590);color:#fff;font-weight:700;}
+.cal-loading{grid-column:1 / -1;padding:30px 0;text-align:center;color:var(--ink3);font-size:12.5px;}
+
+.slot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;}
+.slot-btn{
+  padding:10px 6px;border-radius:9px;border:1.5px solid var(--border2);background:#fff;
+  font-size:13px;color:var(--ink);cursor:pointer;transition:all .15s;
+}
+.slot-btn:hover{border-color:var(--navy3);background:var(--blue2);}
+.slot-btn.selected{background:linear-gradient(135deg,#4a7bc4,#2f5590);border-color:transparent;color:#fff;font-weight:700;}
+.slot-btn.taken{opacity:.35;text-decoration:line-through;cursor:not-allowed;background:var(--light);}
+.slot-btn.taken:hover{border-color:var(--border2);background:var(--light);}
+
+.mg-hidden{display:none !important;}
+</style>
+</head>
+<body>
+
+<div class="mg-hero">
+  <h1>ご予約の変更・キャンセル</h1>
+  <p>FDA無料相談のご予約内容を確認・変更できます</p>
+</div>
+
+<div class="mg-wrap">
+  <div class="mg-card">
+
+    <div class="mg-loading" id="loadingState">
+      <div class="spinner"></div><br>
+      ご予約内容を確認しています…
+    </div>
+
+    <div id="notFoundState" class="mg-hidden">
+      <p class="mg-msg">該当するご予約情報が見つかりませんでした。メール記載のリンクが正しいかご確認いただくか、お手数ですが予約完了メールへご返信ください。</p>
+    </div>
+
+    <div id="cancelledState" class="mg-hidden">
+      <p class="mg-msg">このご予約は既にキャンセルされています。改めてご相談をご希望の際は、お手数ですが予約ページより再度お申し込みください。</p>
+    </div>
+
+    <div id="ineligibleState" class="mg-hidden">
+      <div class="mg-summary">
+        <div class="mg-summary-label">現在のご予約日時</div>
+        <div class="mg-summary-value" id="ineligibleDateLabel"></div>
+      </div>
+      <p class="mg-msg warn">
+        ご予約日時の<span id="ineligibleHoursLabel">24</span>時間前を過ぎているため、こちらでの変更・キャンセルは承れません。恐れ入りますが、予約完了メールへの返信にてご連絡ください。
+      </p>
+    </div>
+
+    <div id="mainState" class="mg-hidden">
+      <div class="mg-summary">
+        <div class="mg-summary-label">現在のご予約日時</div>
+        <div class="mg-summary-value" id="currentDateLabel"></div>
+        <div class="mg-summary-sub">実施方法：Zoom（オンライン）／所要時間：約60分</div>
+      </div>
+
+      <div id="choiceActions" class="mg-actions">
+        <button type="button" class="mg-btn primary" id="showRescheduleBtn" data-ga-event="click_manage_select_reschedule">日程を変更する</button>
+        <button type="button" class="mg-btn danger" id="showCancelBtn" data-ga-event="click_manage_select_cancel">予約をキャンセルする</button>
+      </div>
+
+      <!-- 変更フロー -->
+      <div id="rescheduleFlow" class="mg-hidden">
+        <div class="cal-nav">
+          <button type="button" class="cal-btn" id="calPrev" aria-label="前の月" data-ga-event="click_manage_prev_month">&lsaquo;</button>
+          <div class="cal-month" id="calMonthLabel"></div>
+          <button type="button" class="cal-btn" id="calNext" aria-label="次の月" data-ga-event="click_manage_next_month">&rsaquo;</button>
+        </div>
+        <div class="cal-weekdays"><div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div></div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="slot-grid" id="slotGrid"></div>
+
+        <div class="mg-actions">
+          <button type="button" class="mg-btn primary" id="confirmRescheduleBtn" disabled data-ga-event="click_manage_confirm_reschedule">この日時に変更する</button>
+          <span class="mg-back" id="backFromReschedule" data-ga-event="click_manage_back_reschedule">戻る</span>
+        </div>
+      </div>
+
+      <!-- キャンセルフロー -->
+      <div id="cancelFlow" class="mg-hidden">
+        <p class="mg-msg">上記のご予約をキャンセルします。よろしいですか？　この操作は取り消せません。</p>
+        <div class="mg-actions">
+          <button type="button" class="mg-btn danger" id="confirmCancelBtn" data-ga-event="click_manage_confirm_cancel">キャンセルを確定する</button>
+          <span class="mg-back" id="backFromCancel" data-ga-event="click_manage_back_cancel">戻る</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="doneState" class="mg-hidden">
+      <p class="mg-msg ok" id="doneMessage"></p>
+    </div>
+
+    <div id="errorState" class="mg-hidden">
+      <p class="mg-msg warn" id="errorMessage"></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ▼▼▼ ここをbooking.htmlと同じデプロイURLに差し替えてください ▼▼▼
+const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbwau_lwj4MkLXnOggRytybZakDdxMorJh_TYvT0owcW1waKuyxqMet7F1JjLXYsrmy6/exec";
+// ▲▲▲ ここまで ▲▲▲
+
+const TIME_SLOTS = ["10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00"];
+const SLOT_DURATION_MIN = 60;
+const BUFFER_AFTER_MIN = 30;
+const BOOKABLE_RANGE_DAYS = 90; // 直近3か月分のみ表示
+
+const params = new URLSearchParams(location.search);
+const submissionId = params.get('id') || '';
+
+const states = ['loadingState','notFoundState','cancelledState','ineligibleState','mainState','doneState','errorState'];
+function showState(name){
+  states.forEach(s => document.getElementById(s).classList.toggle('mg-hidden', s !== name));
+}
+
+let bookingInfo = null;
+
+async function init(){
+  if(!submissionId){
+    showState('notFoundState');
+    return;
+  }
+  try{
+    const res = await fetch(`${ENDPOINT_URL}?action=booking&id=${encodeURIComponent(submissionId)}`);
+    const json = await res.json();
+
+    if(json.result === 'not_found' || !json.booking){
+      showState('notFoundState');
+      return;
+    }
+    if(json.result === 'error'){
+      document.getElementById('errorMessage').textContent = '読み込み中にエラーが発生しました。時間をおいて再度お試しください。';
+      showState('errorState');
+      return;
+    }
+
+    bookingInfo = json.booking;
+
+    if(bookingInfo.cancelled){
+      showState('cancelledState');
+      return;
+    }
+
+    const label = formatDateTimeLabel(bookingInfo.date, bookingInfo.time);
+
+    if(!bookingInfo.eligible){
+      document.getElementById('ineligibleDateLabel').textContent = label;
+      document.getElementById('ineligibleHoursLabel').textContent = bookingInfo.minHoursBefore || 24;
+      showState('ineligibleState');
+      return;
+    }
+
+    document.getElementById('currentDateLabel').textContent = label;
+    showState('mainState');
+  }catch(err){
+    document.getElementById('errorMessage').textContent = '読み込み中にエラーが発生しました。時間をおいて再度お試しください。';
+    showState('errorState');
+  }
+}
+
+function formatDateTimeLabel(dateStr, timeStr){
+  if(!dateStr || !timeStr) return '';
+  const [y,m,d] = dateStr.split('-').map(Number);
+  const dateObj = new Date(y, m-1, d);
+  const weekdays = ['日','月','火','水','木','金','土'];
+  const [sh,sm] = timeStr.split(':').map(Number);
+  const endMinutes = sh*60+sm+SLOT_DURATION_MIN;
+  const endLabel = `${String(Math.floor(endMinutes/60)%24).padStart(2,'0')}:${String(endMinutes%60).padStart(2,'0')}`;
+  return `${m}月${d}日（${weekdays[dateObj.getDay()]}）${timeStr}〜${endLabel}`;
+}
+
+/* ===== 変更フロー ===== */
+document.getElementById('showRescheduleBtn').addEventListener('click', () => {
+  document.getElementById('choiceActions').classList.add('mg-hidden');
+  document.getElementById('rescheduleFlow').classList.remove('mg-hidden');
+  renderCalendar();
+});
+document.getElementById('backFromReschedule').addEventListener('click', () => {
+  document.getElementById('rescheduleFlow').classList.add('mg-hidden');
+  document.getElementById('choiceActions').classList.remove('mg-hidden');
+  selectedDate = null; selectedTime = null;
+});
+
+/* ===== キャンセルフロー ===== */
+document.getElementById('showCancelBtn').addEventListener('click', () => {
+  document.getElementById('choiceActions').classList.add('mg-hidden');
+  document.getElementById('cancelFlow').classList.remove('mg-hidden');
+});
+document.getElementById('backFromCancel').addEventListener('click', () => {
+  document.getElementById('cancelFlow').classList.add('mg-hidden');
+  document.getElementById('choiceActions').classList.remove('mg-hidden');
+});
+
+function withMinDelay(promise, ms){
+  return Promise.all([promise, new Promise(res => setTimeout(res, ms))]).then(([result]) => result);
+}
+
+document.getElementById('confirmCancelBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('confirmCancelBtn');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>';
+  try{
+    const res = await withMinDelay(fetch(ENDPOINT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ formType: 'cancel', id: submissionId })
+    }), 900);
+    const json = await res.json();
+    if(json.result === 'success'){
+      document.getElementById('doneMessage').textContent = 'ご予約のキャンセルが完了しました。キャンセル完了メールをお送りしましたのでご確認ください。';
+      showState('doneState');
+    }else{
+      document.getElementById('errorMessage').textContent = json.error || 'キャンセルに失敗しました。時間をおいて再度お試しください。';
+      showState('errorState');
+    }
+  }catch(err){
+    document.getElementById('errorMessage').textContent = 'キャンセルに失敗しました。時間をおいて再度お試しください。';
+    showState('errorState');
+  }finally{
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+});
+
+document.getElementById('confirmRescheduleBtn').addEventListener('click', async () => {
+  if(!selectedDate || !selectedTime) return;
+  const btn = document.getElementById('confirmRescheduleBtn');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>';
+  try{
+    const res = await withMinDelay(fetch(ENDPOINT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ formType: 'reschedule', id: submissionId, date: selectedDate, time: selectedTime, page: location.href })
+    }), 900);
+    const json = await res.json();
+    if(json.result === 'success'){
+      document.getElementById('doneMessage').textContent = `ご予約日時の変更が完了しました（${formatDateTimeLabel(selectedDate, selectedTime)}）。変更完了メールをお送りしましたのでご確認ください。`;
+      showState('doneState');
+    }else{
+      document.getElementById('errorMessage').textContent = json.error || '変更に失敗しました。時間をおいて再度お試しください。';
+      showState('errorState');
+    }
+  }catch(err){
+    document.getElementById('errorMessage').textContent = '変更に失敗しました。時間をおいて再度お試しください。';
+    showState('errorState');
+  }finally{
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+});
+
+/* ===== カレンダー・空き状況（booking.htmlと同じロジック） ===== */
+const busyCache = {};
+const busyFetching = {};
+
+async function ensureBusyForMonth(year, month){
+  const key = `${year}-${month}`;
+  if(busyCache[key] || busyFetching[key]) return busyCache[key];
+  busyFetching[key] = true;
+  try{
+    const url = `${ENDPOINT_URL}?action=busy&year=${year}&month=${month + 1}`;
+    const res = await fetch(url);
+    const json = await res.json();
+    busyCache[key] = (json && json.result === 'success' && json.busy) ? json.busy : {};
+  }catch(err){
+    busyCache[key] = {};
+  }finally{
+    delete busyFetching[key];
+  }
+  return busyCache[key];
+}
+
+function getBusyInfoForDate(dateStr){
+  const [y, m] = dateStr.split('-').map(Number);
+  const key = `${y}-${m - 1}`;
+  const monthMap = busyCache[key];
+  if(!monthMap) return null;
+  return monthMap[dateStr] || { allDay: false, ranges: [] };
+}
+
+function timeToMinutes(hhmm){
+  const [h, m] = hhmm.split(':').map(Number);
+  return h * 60 + m;
+}
+
+function isSlotTaken(dateStr, slotTime){
+  const info = getBusyInfoForDate(dateStr);
+  if(!info) return false;
+  if(info.allDay) return true;
+  const slotStart = timeToMinutes(slotTime);
+  const slotEnd = slotStart + SLOT_DURATION_MIN;
+  return info.ranges.some(r => {
+    const rStart = timeToMinutes(r.start);
+    const rEnd = timeToMinutes(r.end) + BUFFER_AFTER_MIN;
+    return slotStart < rEnd && rStart < slotEnd;
+  });
+}
+
+function isDateFullyBooked(dateStr){
+  const info = getBusyInfoForDate(dateStr);
+  if(!info) return false;
+  if(info.allDay) return true;
+  return TIME_SLOTS.every(t => isSlotTaken(dateStr, t));
+}
+
+let calYear, calMonth;
+let selectedDate = null, selectedTime = null;
+const today = new Date();
+today.setHours(0,0,0,0);
+const maxDate = new Date(today);
+maxDate.setDate(maxDate.getDate() + BOOKABLE_RANGE_DAYS);
+calYear = today.getFullYear();
+calMonth = today.getMonth();
+
+function fmtDate(y,m,d){
+  return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+}
+
+function renderCalendar(){
+  const grid = document.getElementById('calGrid');
+  const label = document.getElementById('calMonthLabel');
+  label.textContent = `${calYear}年 ${calMonth+1}月`;
+
+  const monthKey = `${calYear}-${calMonth}`;
+  if(!busyCache[monthKey]){
+    grid.innerHTML = '';
+    const loading = document.createElement('div');
+    loading.className = 'cal-loading';
+    loading.textContent = '空き状況を確認しています…';
+    grid.appendChild(loading);
+
+    ensureBusyForMonth(calYear, calMonth).then(() => {
+      if(calYear === Number(monthKey.split('-')[0]) && calMonth === Number(monthKey.split('-')[1])){
+        renderCalendar();
+        renderSlots();
+      }
+    });
+    return;
+  }
+
+  grid.innerHTML = '';
+  const firstDay = new Date(calYear, calMonth, 1);
+  const startWeekday = firstDay.getDay();
+  const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
+
+  for(let i=0;i<startWeekday;i++){
+    const cell = document.createElement('div');
+    cell.className = 'cal-cell empty';
+    grid.appendChild(cell);
+  }
+
+  for(let d=1; d<=daysInMonth; d++){
+    const cellDate = new Date(calYear, calMonth, d);
+    cellDate.setHours(0,0,0,0);
+    const cell = document.createElement('div');
+    cell.textContent = d;
+    cell.className = 'cal-cell';
+
+    const isPast = cellDate < today;
+    const isBeyond = cellDate > maxDate;
+    const dateStr = fmtDate(calYear, calMonth, d);
+    const isFullyBooked = isDateFullyBooked(dateStr);
+    const isToday = cellDate.getTime() === today.getTime();
+
+    if(isPast || isBeyond || isFullyBooked){
+      cell.classList.add('past');
+    } else {
+      cell.classList.add('available');
+      cell.addEventListener('click', () => selectDate(dateStr, cell));
+    }
+    if(isToday) cell.style.fontWeight = '700';
+    if(selectedDate === dateStr) cell.classList.add('selected');
+
+    grid.appendChild(cell);
+  }
+
+  document.getElementById('calPrev').disabled = (calYear === today.getFullYear() && calMonth === today.getMonth());
+  document.getElementById('calNext').disabled = (calYear === maxDate.getFullYear() && calMonth === maxDate.getMonth());
+}
+
+function selectDate(dateStr, cellEl){
+  selectedDate = dateStr;
+  selectedTime = null;
+  renderCalendar();
+  renderSlots();
+  updateConfirmButton();
+}
+
+function renderSlots(){
+  const grid = document.getElementById('slotGrid');
+  grid.innerHTML = '';
+  if(!selectedDate) return;
+
+  TIME_SLOTS.forEach(t => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'slot-btn';
+    btn.textContent = t;
+    if(isSlotTaken(selectedDate, t)){
+      btn.classList.add('taken');
+      btn.disabled = true;
+    } else {
+      if(selectedTime === t) btn.classList.add('selected');
+      btn.addEventListener('click', () => {
+        selectedTime = t;
+        renderSlots();
+        updateConfirmButton();
+      });
+    }
+    grid.appendChild(btn);
+  });
+}
+
+function updateConfirmButton(){
+  document.getElementById('confirmRescheduleBtn').disabled = !(selectedDate && selectedTime);
+}
+
+document.getElementById('calPrev').addEventListener('click', () => {
+  calMonth--; if(calMonth < 0){ calMonth = 11; calYear--; }
+  renderCalendar(); renderSlots();
+});
+document.getElementById('calNext').addEventListener('click', () => {
+  calMonth++; if(calMonth > 11){ calMonth = 0; calYear++; }
+  renderCalendar(); renderSlots();
+});
+
+init();
+</script>
+
+<script>
+// 各ボタンを固有のGA4イベント名で計測する。
+(function(){
+  document.querySelectorAll('[data-ga-event]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(typeof gtag === 'function'){
+        gtag('event', el.dataset.gaEvent);
+      }
+    });
+  });
+
+  // 動的生成されるカレンダーの日付・時間枠は親要素でクリックを拾う。
+  var calGrid = document.getElementById('calGrid');
+  if(calGrid){
+    calGrid.addEventListener('click', function(e){
+      if(e.target.closest('.cal-cell.available') && typeof gtag === 'function'){
+        gtag('event', 'click_manage_day');
+      }
+    });
+  }
+  var slotGrid = document.getElementById('slotGrid');
+  if(slotGrid){
+    slotGrid.addEventListener('click', function(e){
+      var btn = e.target.closest('.slot-btn');
+      if(btn && !btn.classList.contains('taken') && typeof gtag === 'function'){
+        gtag('event', 'click_manage_time');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
